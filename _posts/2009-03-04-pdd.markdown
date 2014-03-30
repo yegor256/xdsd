@@ -3,6 +3,8 @@ layout: article
 title: "Puzzle Driven Development"
 date: 2009-03-04 16:52:26
 categories: blog
+permalink: pdd
+disqus: true
 ---
 
 PDD is a method of breaking down a programming task into
