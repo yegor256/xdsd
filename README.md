@@ -1,6 +1,8 @@
 <img src="http://img.xdsd.org/logo.png" width="64px" height="64px" />
 
-e**X**tremely **D**istributed **S**oftware **D**evelopment
+eXtremely Distributed Software Development (XDSD) is a 
+pioneer methodology of developing software in distributed
+teams, which increases quality, motivation, and ROI.
 
 See [www.xdsd.org](http://www.xdsd.org)
 
