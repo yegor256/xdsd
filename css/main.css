@@ -1,5 +1,4 @@
 * {
-    font-family: 'Trebuchet MS', Arial;
     padding: 0;
     margin: 0;
     border: 0;
@@ -7,6 +6,7 @@
 body {
     padding: 1em;
     background: url("http://img.xdsd.org/pattern.png");
+    font-family: 'Trebuchet MS', Arial;
 }
 .top {
     line-height: 1em;
@@ -75,4 +75,9 @@ p {
 h1 {
     margin-bottom: 1em;
     font-weight: normal;
+}
+.highlight {
+    font-family: 'Consolas', 'Menlo', 'Monaco', monospace, serif;
+    background-color: #eee;
+    line-height: 1em;
 }
