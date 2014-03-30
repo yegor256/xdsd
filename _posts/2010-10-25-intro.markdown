@@ -1,0 +1,20 @@
+---
+layout: article
+title: "Our Manifest"
+date: 2010-10-25 16:52:26
+categories: front
+---
+
+XDSD is an open software development methodology aimed to reduce risks
+and improve quality in a software project of almost any size.
+
+At the moment, there are four fundamental principles:
+
+ * Everyone gets paid for verified deliverables
+ * Defects are planned and don't block delivery
+ * Quality-of-code metrics are CI gate conditions
+ * VCS commits to master branch are prohibited
+
+XDSD effectively wraps other software development methodologies
+(incl. Agile/XP, RUP&reg;, MSF&reg;, and even Waterfall) to maximize
+quality of the delivered product and increase team productivity.
