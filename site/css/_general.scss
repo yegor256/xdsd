@@ -1,0 +1,59 @@
+$main-font: 'Antic Didone', serif;
+$title-font: 'HNC', sans-serif;
+$code-font: 'Source Code Pro', ;
+$footer-font: 'Ubuntu', sans-serif;
+$background-color: #475059;
+$wrapper-color: #717a82;
+$under-color: #aeb9bf;
+
+
+body {
+  background-color: $background-color;
+  @include main-font();
+  padding: 1.5em;
+  @media screen and (max-width:600px) {
+    padding: 0.5em;
+  }
+  margin: 0em;
+  position: relative;
+  overflow-x: hidden;
+  &:after {
+    content:"";
+    height:40px;
+    width: 100%;
+    background:#aeb9bf;
+    top:-15px;
+    @media screen and (max-width:600px) {
+      top:-35px;
+    }
+    left:0px;
+    position: absolute;
+    z-index: 100;
+  }
+  &:before {
+    content:"";
+    height:40px;
+    width: 50%;
+    background:black;
+    top:-30px;
+    @media screen and (max-width:600px) {
+      top:-45px;
+    }
+    left:25%;
+    border-radius:50%;
+    position: absolute;
+    z-index: 100;
+    @include box-shadow(0px 5px 50px rgba(0, 0, 0, 0.8));
+  }
+}
+a, a:visited {
+  @include transition(all 0.3s ease);
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px dotted white;
+  &:hover {
+    @include transition(all 0.3s ease);
+    color: $background-color;
+    border-bottom: 1px dotted black;
+  }
+}

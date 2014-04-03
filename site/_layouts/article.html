@@ -3,9 +3,24 @@ layout: main
 ---
 
 <h1>{{ page.title }}</h1>
-<p class="meta">
-  {{ page.date | date_to_string }}
-</p>
+
+<div class="author">
+  <div class="photo">
+    <img src="{{ page.author.avatar }}" class="icon" />
+  </div>
+  <div class="name">
+    {{ page.author.name }}<br/>
+    {{ page.date | timeago  }}
+  </div>
+</div>
+
+
+<div class="social-buttons">
+  <button class="icon-button facebook"><i class="fa fa-facebook"></i></button>
+  <button class="icon-button twitter"><i class="fa fa-twitter"></i></button>
+  <button class="icon-button google"><i class="fa fa-google-plus-square"></i></button>
+</div>
+
 <div class="post">
   {{ content }}
 </div>

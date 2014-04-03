@@ -1,0 +1,21 @@
+@mixin main-font() {
+  font-family: $main-font;
+  font-weight: 400;
+}
+@mixin title-font() {
+  font-family: $title-font;
+  font-weight: 600;
+}
+
+@mixin title-light-font() {
+  font-family: $title-font;
+  font-weight: 300;
+}
+@mixin code-font() {
+  font-family: $code-font;
+  font-weight: 400;
+}
+@mixin footer-font() {
+  font-family: $footer-font;
+  font-weight: 400;
+}

@@ -5,3 +5,10 @@ redcarpet:
 pygments: true
 permalink: pretty
 
+# see https://github.com/noct/jekyll-sass
+gems: ['jekyll-sass', 'jekyll/timeago']
+sass:
+  style: expanded
+  deploy_style: compressed
+  compile_in_place: false
+
