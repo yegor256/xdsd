@@ -11,9 +11,9 @@ cd ${CLONE}
 git checkout gh-pages
 rm -rf *
 cp -R $SRC/_site/* .
-rm -rf ${CLONE}
 
 git add .
 git commit -am "new site version"
 git push origin gh-pages
 
+rm -rf ${CLONE}
