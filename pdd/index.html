@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="XDSD is a software development methodology that increases quality and reduces risks in distributed projects of almost any size" />
+    <link rel="icon" type="image/gif" href="http://img.xdsd.org/favicon.gif">
+    <link rel="shortcut icon" href="http://img.xdsd.org/favicon.gif" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.xdsd.org/rss"/>
+    <link rel="author" href="https://plus.google.com/u/0/114792568016408327418?rel=author" />
+    <meta name="keywords" content="software development methodology, distributed programming, outsourcing, XDSD, distributed software development, parallel programming, remote programming, software development methodology, extremely distributed software development, extreme programming, Agile, XP, PMBOK, project management, branching, revision control" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css"/>
+    <link rel="stylesheet" href="/css/layout.css"/>
+    <link rel="stylesheet" href="/css/syntax.css"/>
+    <title>Puzzle Driven Development</title>
+  </head>
+  <body>
+    <div class="top">
+        <img src="http://img.xdsd.org/logo.png"/>
+        eXtremely Distributed
+        <span class="soft-style">Software Development</span>
+    </div>
+    <div class="wrapper">
+      <div class="content">
+        <h1>Puzzle Driven Development</h1>
+
+<div class="author">
+  <div class="photo">
+    <img src="http://www.gravatar.com/avatar/70942ffdd8084b5a51e17e3c0996d53c?s=300" class="icon" />
+  </div>
+  <div class="name">
+    Yegor Bugayenko<br/>
+    5 years and 1 month ago
+  </div>
+</div>
+
+
+<div class="social-buttons">
+  <button class="icon-button facebook"><i class="fa fa-facebook"></i></button>
+  <button class="icon-button twitter"><i class="fa fa-twitter"></i></button>
+  <button class="icon-button google"><i class="fa fa-google-plus-square"></i></button>
+</div>
+
+<div class="post">
+  <p>PDD is a method of breaking down a programming task into
+smaller ones, and enabling their implementation in parallel.
+PDD method is widely used in XDSD methodology. The method is
+pending USPTO patent
+(application no. <a href="http://www.google.com/patents/US20120023476">12/840,306</a>).</p>
+
+<p>Let&#39;s review the method by example. You are a programmer and you
+have a task to design and implement a Java class. This is
+a formal task description: &quot;class <code>DBWriter</code> has to extend <code>java.io.Writer</code>
+abstract class and save all incoming data into the database&quot;.</p>
+
+<p>You have one hour to implement this task. It is obvious that one hour
+is not enough, because the problem is bigger than this time slot,
+and there are a number of unknowns:</p>
+
+<ul>
+<li>What information we need to save, in what format?</li>
+<li>What is the DB schema? Is it SQL or NoSQL database?</li>
+<li>How to connect to the DB? JDBC? JPA? DAO?</li>
+<li>How to handle exceptions?</li>
+</ul>
+
+<p>Let&#39;s keep all this unknowns in mind and try to solve the problem
+on the highest level of abstraction. Of course, we start with a test:</p>
+
+<div class="highlight"><pre><code class="java"><span class="kn">import</span> <span class="nn">org.junit.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">mockito</span><span class="o">.</span><span class="na">Mockito</span><span class="o">.*;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DBWriterTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kt">void</span> <span class="nf">testSavesDataIntoDatabase</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+    <span class="n">DataBridge</span> <span class="n">mapper</span> <span class="o">=</span> <span class="n">mock</span><span class="o">(</span><span class="n">DataBridge</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+    <span class="n">Writer</span> <span class="n">writer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DBWriter</span><span class="o">(</span><span class="n">mapper</span><span class="o">);</span>
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="n">writer</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="s">&quot;hello, world!&quot;</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+      <span class="n">writer</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="n">verify</span><span class="o">(</span><span class="n">mapper</span><span class="o">).</span><span class="na">insert</span><span class="o">(</span><span class="s">&quot;hello, world!&quot;</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<p>In this test, we defined an expected behavior of the class.
+The test will fail to compile because there are two classes
+missed: <code>DataBridge</code> and <code>DBWriter</code>. Let&#39;s implement
+the bridge first:</p>
+
+<div class="highlight"><pre><code class="java"><span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">DataBridge</span> <span class="o">{</span>
+  <span class="kt">void</span> <span class="nf">insert</span><span class="o">(</span><span class="n">String</span> <span class="n">text</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<p>And the writer itself:</p>
+
+<div class="highlight"><pre><code class="java"><span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.Writer</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.utils.Arrays</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DBWriter</span> <span class="kd">implements</span> <span class="n">Writer</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="n">DataBridge</span> <span class="n">bridge</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">DBWriter</span><span class="o">(</span><span class="n">DataBridge</span> <span class="n">brdg</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">bridge</span> <span class="o">=</span> <span class="n">brdg</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kt">void</span> <span class="nf">flush</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kt">void</span> <span class="nf">close</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kt">void</span> <span class="nf">write</span><span class="o">(</span><span class="kt">char</span><span class="o">[]</span> <span class="n">cbuf</span><span class="o">,</span> <span class="kt">int</span> <span class="n">off</span><span class="o">,</span> <span class="kt">int</span> <span class="n">len</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="n">Arrays</span><span class="o">.</span><span class="na">copyOfRange</span><span class="o">(</span><span class="n">cbuf</span><span class="o">,</span> <span class="n">off</span><span class="o">,</span> <span class="n">off</span> <span class="o">+</span> <span class="n">len</span><span class="o">));</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">bridge</span><span class="o">.</span><span class="na">insert</span><span class="o">(</span><span class="n">data</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<p>The problem is solved. We successfully designed, implemented
+and tested the required <code>DBWriter</code> class, which immediately
+can be used &quot;as is&quot; by other classes.</p>
+
+<p>Of course, the implementation is not finished, since we are not
+writing anything to the database, and we aren&#39;t answering
+the majority of questions asked above. We still don&#39;t know how
+exactly the database has to be connected, whether it&#39;s SQL or NoSQL,
+what is the right data format, etc.</p>
+
+<p>However, we&#39;ve already made a number of important
+architectural assumptions, which allowed us
+to implement the class and made it usable by other classes.</p>
+
+<p>Now it&#39;s time to identify the unknowns in our code and
+mark them with puzzles. Every puzzle is a request for refinement.
+We want to ask someone else to help us to refine and correct
+our assumptions. Here is the first puzzle we want to add:</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">DataBridge</span> <span class="o">{</span>
+  <span class="cm">/**</span>
+<span class="cm">   * @todo #123 I assumed that a simple insert() method will be</span>
+<span class="cm">   *  enough to insert data into the database. Maybe it&#39;s</span>
+<span class="cm">   *  not true, and some sort of transaction support will be</span>
+<span class="cm">   *  required. We should implement this interface and create</span>
+<span class="cm">   *  an integration test with a database.</span>
+<span class="cm">   */</span>
+  <span class="kt">void</span> <span class="nf">insert</span><span class="o">(</span><span class="n">String</span> <span class="n">text</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<p>The puzzle has three elements: <code>@todo</code> tag, <code>#123</code> locator,
+and a comment. Locator says the following:
+&quot;The puzzle was created while working with ticket #123&quot;.</p>
+
+<p>Let’s add one more puzzle:</p>
+
+<div class="highlight"><pre><code class="java"><span class="kt">void</span> <span class="nf">write</span><span class="o">(</span><span class="kt">char</span><span class="o">[]</span> <span class="n">cbuf</span><span class="o">,</span> <span class="kt">int</span> <span class="n">off</span><span class="o">,</span> <span class="kt">int</span> <span class="n">len</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+  <span class="c1">// @todo #123 I assumed that the data should be sent to the database</span>
+  <span class="c1">//  as they are received by the writer. Maybe this assumption</span>
+  <span class="c1">//  is wrong and we should aggregate data into blocks/chunks</span>
+  <span class="c1">//  and then send them to the data bridge.</span>
+  <span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="n">Arrays</span><span class="o">.</span><span class="na">copyOfRange</span><span class="o">(</span><span class="n">cbuf</span><span class="o">,</span> <span class="n">off</span><span class="o">,</span> <span class="n">off</span> <span class="o">+</span> <span class="n">len</span><span class="o">));</span>
+  <span class="k">this</span><span class="o">.</span><span class="na">bridge</span><span class="o">.</span><span class="na">insert</span><span class="o">(</span><span class="n">data</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<p>This puzzle indicates one of our concerns, since we are
+not sure that the architectural decision is right. Actually,
+the design is very primitive at the moment and very likely is wrong.
+To refine it and refactor we need more information from the task specifier.</p>
+
+<p>The task is finished. Now you can reintegrate your branch into
+<code>master</code> and return the ticket back to those who assigned it to you.
+His task now is to find other people who will be able
+to resolve the puzzles we just created.</p>
+
+<p>Every puzzle created now will produce other puzzles, which
+will be resolved by other people. Thus, our small task of 1 hour size
+may generate hundreds of other tasks, which will be resolved in days
+or even years. However, your goal, while working with your particular
+task, is to finish it as soon as possible and reintegrate
+your branch into <code>master</code>.</p>
+
+<h2 id="toc_0">Best Practices</h2>
+
+<p>There are a few simple rules that help you to place puzzles correctly.</p>
+
+<p>First of all, you should put your <code>@todo</code> annotations where
+your code hits a stub. For example, in a unit test.
+You&#39;re implementing a test, it fails because the class is not
+yet implemented. You skip the test with <code>@Ignore</code> annotation
+and add <code>@todo</code> puzzle to its Javadoc.</p>
+
+<p>Second, your puzzle should stay as close as possible to the code
+element that is hitting the stub. Say, you have a unit test that
+has three test methods. All of them fail now because the class
+is not implemented. The best approach would be to ignore every one
+of them and create three (!) puzzles. Every one of them should explain
+what do you expect from the class and how it should be implemented.</p>
+
+<p>Third, be as descriptive as possible. Your puzzle will soon
+be a task definition for someone else. So, explain what do you
+expect that other person to implement, how, which documentation to use, etc.
+There should be enough information to implement your required
+classes without your help!</p>
+
+</div>
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_shortname = 'xdsd';
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+      </div>
+      <div class="footer">
+        <div class="left">
+          <img src="http://img.xdsd.org/logo.png" class="icon" />
+        </div>
+        <div class="right">
+          860.506.5536<br/>
+          <a href="mailto:join@xdsd.org">join@xdsd.org</a>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1963507-16']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>

@@ -1,15 +1,50 @@
----
-layout: main
-title: XDSD
----
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="XDSD is a software development methodology that increases quality and reduces risks in distributed projects of almost any size" />
+    <link rel="icon" type="image/gif" href="http://img.xdsd.org/favicon.gif">
+    <link rel="shortcut icon" href="http://img.xdsd.org/favicon.gif" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.xdsd.org/rss"/>
+    <link rel="author" href="https://plus.google.com/u/0/114792568016408327418?rel=author" />
+    <meta name="keywords" content="software development methodology, distributed programming, outsourcing, XDSD, distributed software development, parallel programming, remote programming, software development methodology, extremely distributed software development, extreme programming, Agile, XP, PMBOK, project management, branching, revision control" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css"/>
+    <link rel="stylesheet" href="/css/layout.css"/>
+    <link rel="stylesheet" href="/css/syntax.css"/>
+    <title>XDSD</title>
+  </head>
+  <body>
+    <div class="top">
+        <img src="http://img.xdsd.org/logo.png"/>
+        eXtremely Distributed
+        <span class="soft-style">Software Development</span>
+    </div>
+    <div class="wrapper">
+      <div class="content">
+        <h1>What is XDSD?</h1>
 
-<h1>What is XDSD?</h1>
 
-{% for post in site.categories.front %}
-  {{ post.content }}
-{% endfor %}
+  <p>XDSD is an open software development methodology aimed to reduce risks
+and improve quality in a software project of almost any size.</p>
 
-<p><a href="http://img.xdsd.org/XDSD-WhitePaper.pdf"><img src="http://img.xdsd.org/acrobat-icon.gif" style="float: left; margin-right: 1em;"/></a></p>
+<p>At the moment, there are four fundamental principles:</p>
+
+<ul>
+<li>Everyone gets paid for verified deliverables</li>
+<li>Defects are planned and don&#39;t block delivery</li>
+<li>Quality-of-code metrics are CI gate conditions</li>
+<li>VCS commits to master branch are prohibited</li>
+</ul>
+
+<p>XDSD effectively wraps other software development methodologies
+(incl. Agile/XP, RUP&reg;, MSF&reg;, and even Waterfall) to maximize
+quality of the delivered product and increase team productivity.</p>
+
+
+
+<p><a href="http://img.xdsd.org/XDSD-WhitePaper.pdf"><img src="http://img.xdsd.org/acrobat-icon.png" style="float: left; margin-right: 1em;"/></a></p>
 <p>XDSD methodology is still in R&amp;D phase.
 In the meantime, you can read a
 <a href="http://img.xdsd.org/XDSD-WhitePaper.pdf">White Paper (70Kb PDF)</a>
@@ -18,7 +53,31 @@ recently published by <a href="http://www.technoparkcorp.com">TechnoPark Corp.</
 <p>Our recent blog posts:</p>
 
 <ul class="posts">
-{% for post in site.categories.blog %}
-  <li><span>{{ post.date | date_to_string }}</span>: <a href="{{ post.url }}">{{ post.title }}</a></li>
-{% endfor %}
+
+  <li><span>04 Mar 2009</span>: <a href="/pdd">Puzzle Driven Development</a></li>
+
 </ul>
+
+      </div>
+      <div class="footer">
+        <div class="left">
+          <img src="http://img.xdsd.org/logo.png" class="icon" />
+        </div>
+        <div class="right">
+          860.506.5536<br/>
+          <a href="mailto:join@xdsd.org">join@xdsd.org</a>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1963507-16']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
