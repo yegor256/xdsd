@@ -1,0 +1,24 @@
+---
+layout: main
+title: XDSD
+---
+
+<h1>What is XDSD?</h1>
+
+{% for post in site.categories.front %}
+  {{ post.content }}
+{% endfor %}
+
+<p><a href="http://img.xdsd.org/XDSD-WhitePaper.pdf"><img src="http://img.xdsd.org/acrobat-icon.gif" style="float: left; margin-right: 1em;"/></a></p>
+<p>XDSD methodology is still in R&amp;D phase.
+In the meantime, you can read a
+<a href="http://img.xdsd.org/XDSD-WhitePaper.pdf">White Paper (70Kb PDF)</a>
+recently published by <a href="http://www.technoparkcorp.com">TechnoPark Corp.</a></p
+
+<p>Our recent blog posts:</p>
+
+<ul class="posts">
+{% for post in site.categories.blog %}
+  <li><span>{{ post.date | date_to_string }}</span>: <a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>

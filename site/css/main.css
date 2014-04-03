@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body {
+    padding: 1em;
+    background: url("http://img.xdsd.org/pattern.png");
+    font-family: 'Trebuchet MS', Arial;
+}
+.top {
+    line-height: 1em;
+    padding: 1em;
+    font-weight: normal;
+    margin: 0;
+    font-size: 3em;
+    text-align: center;
+}
+.wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    width: 750px;
+    position: relative;
+}
+.content {
+    border: 2px dotted #0093d0;
+    padding: 1em;
+    line-height: 1.6em;
+    text-align: left;
+    position: relative;
+    background-color: white;
+}
+.footer {
+    padding: 1em;
+    font-size: 0.9em;
+    position: relative;
+}
+    .left {
+        padding: 1em;
+        width: 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .right {
+        padding: 1em;
+        width: 50%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        text-align: right;
+    }
+tt {
+    background-color: #ddd;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    font-family: 'Consolas', 'Menlo', 'Monaco', monospace, serif;
+}
+ol, ul {
+    margin-left: 2em;
+}
+.icon {
+    position:absolute;
+    right: 2px;
+    bottom: 2px;
+    width: 16px;
+    height: 16px;
+}
+a {
+    color: #0093d0;
+}
+p {
+    margin: 1em 0;
+}
+h1 {
+    margin-bottom: 1em;
+    font-weight: normal;
+}
+.highlight {
+    font-family: 'Consolas', 'Menlo', 'Monaco', monospace, serif;
+    background-color: #eee;
+    line-height: 1em;
+}
