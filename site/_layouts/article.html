@@ -16,9 +16,15 @@ layout: main
 
 
 <div class="social-buttons">
-  <button class="icon-button facebook"><i class="fa fa-facebook"></i></button>
-  <button class="icon-button twitter"><i class="fa fa-twitter"></i></button>
-  <button class="icon-button google"><i class="fa fa-google-plus-square"></i></button>
+  <a target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')"
+    href="http://www.facebook.com/sharer/sharer.php?u=http://www.xdsd.org{{ page.url }}"><button
+    class="icon-button facebook"><i class="fa fa-facebook"></i></button></a>
+  <a target="_blank" onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')"
+    href="https://twitter.com/share"><button
+    class="icon-button twitter"><i class="fa fa-twitter"></i></button></a>
+  <a target="_blank" onclick="return !window.open(this.href, 'Google+', 'width=640,height=300')"
+    href="https://plus.google.com/share?url=http://www.xdsd.org{{ page.url }}"><button
+    class="icon-button google"><i class="fa fa-google-plus-square"></i></button></a>
 </div>
 
 <div class="post">
