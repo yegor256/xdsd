@@ -179,10 +179,7 @@
       background-color: $under-color;
       color:$background-color;
       @include code-font();
-      padding: 1px;
       //text-shadow:0px 1px 0px rgba(0, 0, 0, 0.5);
-      padding-left: 4px;
-      padding-right: 4px;
       border-radius: 3px;
     }
     .highlight {
@@ -190,11 +187,13 @@
         background:#555d66;
         color:$under-color;
       }
+      padding: 1em 2em;
       border-radius: 10px;
       font-size:0.7em;
       line-height: 1.3em;
       overflow-x: scroll;
       background-color: #555d66;
+
     }
     img {
       float:left;
