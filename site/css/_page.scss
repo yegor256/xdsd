@@ -56,6 +56,13 @@
   .soft-style {
     font-weight:300;
   }
+  a, a:visited, a:hover, a:active {
+    text-decoration: none;
+    border-bottom:0px;
+    &:hover {
+      color:white;
+    }
+  }
 }
 .wrapper {
   .content {
