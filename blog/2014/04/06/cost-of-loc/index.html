@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="XDSD is a software development methodology that increases quality and reduces risks in distributed projects of almost any size" />
+    <link rel="icon" type="image/gif" href="http://img.xdsd.org/favicon.gif">
+    <link rel="shortcut icon" href="http://img.xdsd.org/favicon.gif" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.xdsd.org/rss"/>
+    <link rel="author" href="https://plus.google.com/u/0/114792568016408327418?rel=author" />
+    <meta name="keywords" content="software development methodology, distributed programming, outsourcing, XDSD, distributed software development, parallel programming, remote programming, software development methodology, extremely distributed software development, extreme programming, Agile, XP, PMBOK, project management, branching, revision control" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css"/>
+    <link rel="stylesheet" href="/css/layout.css"/>
+    <link rel="stylesheet" href="/css/code.css"/>
+    <title>How much do you pay per line of code?</title>
+  </head>
+  <body>
+    <div class="top">
+      <a href="/">
+        <img src="http://img.xdsd.org/logo.png"/>
+        eXtremely Distributed
+        <span class="soft-style">Software Development</span>
+      </a>
+    </div>
+    <div class="wrapper">
+      <div class="content">
+        <h1>How much do you pay per line of code?</h1>
+
+<div class="author">
+  <div class="photo">
+    <img src="http://www.gravatar.com/avatar/70942ffdd8084b5a51e17e3c0996d53c?s=300" class="icon" />
+  </div>
+  <div class="name">
+    Yegor Bugayenko<br/>
+    6 April 2014
+  </div>
+</div>
+
+
+<div class="social-buttons">
+  <a target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')"
+    href="http://www.facebook.com/sharer/sharer.php?u=http://www.xdsd.org/blog/2014/04/06/cost-of-loc/"><button
+    class="icon-button facebook"><i class="fa fa-facebook"></i></button></a>
+  <a target="_blank" onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')"
+    href="https://twitter.com/share"><button
+    class="icon-button twitter"><i class="fa fa-twitter"></i></button></a>
+  <a target="_blank" onclick="return !window.open(this.href, 'Google+', 'width=640,height=300')"
+    href="https://plus.google.com/share?url=http://www.xdsd.org/blog/2014/04/06/cost-of-loc/"><button
+    class="icon-button google"><i class="fa fa-google-plus-square"></i></button></a>
+</div>
+
+<div class="post">
+  <p>Yes, I know, line of code is a very wrong metric. There were tons of
+articles written about it, including famous books. However, I want to
+compare two projects I&#39;ve recently taken participation in.</p>
+
+<h2 id="toc_0">Traditionally co-located</h2>
+
+<p>The first one was done by a traditionally co-located group of programmers.
+There were about 25 of them (I&#39;m not counting managers, analysts,
+product owners, SCRUM masters, etc.) The project is a web auctioning site, with
+pretty high traffic (over two million page views per day).</p>
+
+<p>The code base size was about 200k lines, where 150k was PHP, 35k in JavaScript and the
+rest in CSS, XML, Ruby, and something else. I&#39;m counting only non-empty and
+non-comment lines of code, using
+<a href="http://cloc.sourceforge.net/"><code>cloc.pl</code></a>.</p>
+
+<p>It was a commercial projects, so I can&#39;t disclose its name.</p>
+
+<p>The team was co-located in one office in Europe, where everybody were
+working from nine till five. We had meetings, lunches, desk-to-desk chats,
+and all that stuff. All tasks were tracked in JIRA.</p>
+
+<h2 id="toc_1">Extremely distributed</h2>
+
+<p>The second one was an open source Java product, developed by an
+<a href="http://www.xdsd.org">extremely distributed</a>
+team of about 15 developers. We didn&#39;t have any chats, or
+any other informal communications. We discussed everything in
+tickets, using Github issue tracking. Code base was significantly smaller
+with about 30k lines, where 90% was in Java and the rest in XML.</p>
+
+<p>Both projects hosted their code bases in Github.</p>
+
+<p>Both teams were using build automation, continuous integration, pre-flight
+builds, static analysis, and code reviews. Both projects satisfied
+the requirements of their users. I&#39;m mentioning this in order to show
+that both projects produced valueable and useful lines of code. There was
+no garbage and almost no code duplication.</p>
+
+<h2 id="toc_2">Show me the money</h2>
+
+<p>In both projects my role was called a lead architect, and I know their
+economics. Besides that, I had access to both Git repositories, so I
+can measure how many new lines (or changed lines) were introduced by both
+teams in, say, three months period.</p>
+
+<p>Now, let&#39;s see the numbers.</p>
+
+<p>The first project (the co-located one) was paying approximately &euro;50,000
+annual salary to a good developer, which was about $5,600 per month
+or about $35 per hour. The second one (an extremely distributed)
+was paying $30-40 per hour.</p>
+
+<p>The first one, in three months produced 59k new lines and removed
+29k changes in <code>master</code> branch, which in total equals to 88k. The
+project spent about 10,000 hours to produce these lines
+(20 programmers, 3 months, 170 working hours per month) or $350k. This means that
+the project paid <strong>$3.98 per LoC</strong>.</p>
+
+<p>The second one, in three months produced 45k new lines and removed 9k, which
+in total equals to 54k. To complete this work we&#39;ve spent $7k
+(approximately 200 working hours).
+That means that the project paid <strong>$0.13 per LoC</strong>.</p>
+
+<h2 id="toc_3">So, what?</h2>
+
+<p>What I&#39;m trying to say by these numbers is that distributed
+programming is much more effective, money-wise, than co-located teams.
+Again, I can hear you saying that a line of code is not a proper metric.
+But, come on, $0.13 vs. $3.98? Thirty times more expensive? It&#39;s not about
+metrics any more. It&#39;s about waste of money. Big time.</p>
+
+<p>Of course, this result can&#39;t be achieved just by telling your programmers
+to work from home and never come to the office. XDSD is not about that.
+<a href="http://www.xdsd.org">XDSD</a> is about strict quality principles, which should
+be followed by the entire team.</p>
+
+<p>And when these principles are in place &mdash; you pay thirty time less for
+the same result.</p>
+
+</div>
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+  var disqus_shortname = 'xdsd';
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+      </div>
+      <div class="footer">
+        <div class="left">
+          <img src="http://img.xdsd.org/logo.png" class="icon" />
+        </div>
+        <div class="right">
+          860.506.5536<br/>
+          <a href="mailto:join@xdsd.org">join@xdsd.org</a>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1963507-16']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
