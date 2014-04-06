@@ -128,4 +128,4 @@ to work from home and never come to the office. XDSD is not about that.
 [XDSD](http://www.xdsd.org) is about strict quality principles, which should
 be followed by the entire team.
 
-And when these principles are in place &mdash; you pay thirty time less.
+And when these principles are in place &mdash; you pay thirty times less.
