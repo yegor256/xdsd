@@ -64,6 +64,9 @@
     }
   }
 }
+p {
+  clear: both;
+}
 .wrapper {
   .content {
     @include box-sizing(border-box);
@@ -194,10 +197,6 @@
       overflow-x: scroll;
       background-color: #555d66;
 
-    }
-    img {
-      float:left;
-      margin-right:2em;
     }
     h1 {
       margin-top: 1.5em;
