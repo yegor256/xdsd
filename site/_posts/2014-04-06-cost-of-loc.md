@@ -75,7 +75,7 @@ Now, let's see the numbers.
 The first project (the co-located one) was paying approximately &euro;50,000
 annual salary to a good developer, which was about $5,600 per month
 or about $35 per hour. The second one (an extremely distributed)
-was paying $25-35 per hour, for completed tasks only, according to one of
+was paying $20-35 per hour, for completed tasks only, according to one of
 the principles of [XDSD](http://www.xdsd.org).
 
 The first one, in three months produced 59k new lines and removed
@@ -95,7 +95,7 @@ very close to what people say about their projects
 
 The second project, in the same three months produced 45k new lines and removed 9k, which
 in total equals to 54k. To complete this work we've spent $7k
-(approximately 200 working hours).
+(approximately 350 working hours in 650 tasks).
 
 Thus, the project has paid **$0.13 per LoC**. That also means
 that programmers were writing approximately 270 lines per hour
