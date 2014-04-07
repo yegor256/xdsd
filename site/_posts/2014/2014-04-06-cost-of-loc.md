@@ -7,6 +7,7 @@ author:
   avatar: http://www.gravatar.com/avatar/70942ffdd8084b5a51e17e3c0996d53c?s=300
 categories: blog
 disqus: true
+tags: loc cost experience
 ---
 
 Yes, I know, "line of code" (LoC)
