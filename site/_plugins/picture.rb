@@ -1,5 +1,5 @@
 module Xdsd
-  class PicBlock < Liquid::Block
+  class PictureBlock < Liquid::Tag
     def initialize(tag, markup, tokens)
       super
       opts = markup.split(/\s+/, 3)
@@ -13,4 +13,4 @@ module Xdsd
   end
 end
 
-Liquid::Template.register_tag("pic", Xdsd::PicBlock)
+Liquid::Template.register_tag("picture", Xdsd::PictureBlock)

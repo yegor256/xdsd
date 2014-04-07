@@ -26,9 +26,7 @@ There were about 20 of them (I'm not counting managers, analysts,
 product owners, SCRUM masters, etc.) The project is a web auctioning site, with
 pretty high traffic (over two million page views per day).
 
-<p><img src="http://img.xdsd.org/2014/04/brazil-crowded-office.jpg"
-  style="width: 600px;"
-  alt="Brazil (1985) by Terry Gilliam"/></p>
+{% picture http://img.xdsd.org/2014/04/brazil-crowded-office.jpg 600 Brazil (1985) by Terry Gilliam %}
 
 The code base size was about 200k lines, where 150k was PHP, 35k in JavaScript and the
 rest in CSS, XML, Ruby, and something else. I'm counting only non-empty and
@@ -50,9 +48,7 @@ any other informal communications. We discussed everything in
 tickets, using Github issue tracking. Code base was significantly smaller
 with about 30k lines, where 90% was in Java and the rest in XML.
 
-<p><img src="http://img.xdsd.org/2014/04/shaolin-temple-jet-li.jpg"
-  style="width: 600px;"
-  alt="Shaolin Temple (1982) by Chang Hsin Yen"/></p>
+{% picture http://img.xdsd.org/2014/04/shaolin-temple-jet-li.jpg 600 Shaolin Temple (1982) by Chang Hsin Yen %}
 
 Both projects hosted their code bases in Github. Both teams
 were developing in [feature branches](http://martinfowler.com/bliki/FeatureBranch.html),
