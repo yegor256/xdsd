@@ -2,282 +2,173 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
-.top {
-  color:#edf3f7;
-  opacity: 0;
-  @media screen and (max-width:2000px) {
-    width:50%;
-    margin-top: 1em;
-    font-size:4em;
-    line-height: 0.9em;
-    margin-bottom: 1em;
-  }
-  @media screen and (max-width:1300px) {
-    width:70%;
-    margin-top: 1em;
-    font-size:4em;
-  }
-  @media screen and (max-width:1000px) {
-    width:80%;
-    margin-top: 1em;
-    font-size:3em;
 
-  }
-  @media screen and (max-width:800px) {
-    width:90%;
-    margin-top: 1em;
-    font-size:3em;
-  }
-  @media screen and (max-width:600px) {
-    width:100%;
-    margin-top: 1em;
-    font-size:2em;
-    margin-bottom: 1.5em;
-  }
-  img {
-    width:auto;
-    @media screen and (max-width:600px) {
-      width:40px;
-    }
-  }
+.page-container {
+  @include box-sizing(border-box);
+  display: flex;
+  flex-direction: row;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
-  @include title-font();
-  @include animation-duration(1s);
-  @include animation-fill-mode(forwards);
-  @include animation-name(showSlowly);
-  @include transition(all 0.1s ease-in-out);
-  @include animation-timing-function(ease);
-  .soft-style {
-    font-weight:300;
-  }
-  a, a:visited, a:hover, a:active {
-    text-decoration: none;
-    border-bottom:0px;
-    &:hover {
-      color:white;
-    }
-  }
-}
-.wrapper {
-  .content {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  width: 80%;
+
+  .top {
+    order: 0;
+    flex: 0 0 33%;
+    align-self: auto;
+    @include animation-duration(1s);
+    @include animation-fill-mode(forwards);
+    @include animation-name(showSlowly);
+    @include transition(all .1s ease-in-out);
+    @include animation-timing-function(ease);
+    @include title-font();
     @include box-sizing(border-box);
-    @include main-font();
-    margin-left: auto;
-    margin-right: auto;
-    @media screen and (max-width:2000px) {
-      padding:2em;
-      padding-left: 3em;
-      padding-right: 3em;
-      font-size: 1.5em;
-      line-height: 1.5em;
-      width:70%;
-    }
-    @media screen and (max-width:1300px) {
-      padding:2em;
-      padding-left: 3em;
-      padding-right: 3em;
-      font-size: 1.5em;
-      line-height: 1.5em;
-      width:90%;
-    }
-    @media screen and (max-width:1000px) {
-      padding:2em;
-      padding-left: 3em;
-      padding-right: 3em;
-      font-size: 1.4em;
-      line-height: 1.5em;
-      width:100%;
-    }
-    @media screen and (max-width:800px) {
-      padding-top:1em;
-      padding-left: 1.5em;
-      padding-right: 1.5em;
-      font-size: 1.4em;
-      line-height: 1.5em;
-      width:100%;
-    }
-    @media screen and (max-width:600px) {
-      padding-top:1em;
-      padding-left: 1em;
-      padding-right: 1em;
-      font-size: 1.2em;
-      line-height: 1.5em;
-      width:100%;
-    }
-    color:white;
+    border-right: 1px solid lightgray;
+    color: #edf3f7;
+    opacity: 0;
     text-align: left;
-    background-color: $wrapper-color;
-    position: relative;
-    .author {
-      .photo {
-        width: 110px;
-        @media screen and (max-width:600px) {
-          width:50px;
-        }
-        @media screen and (max-width:800px) {
-          width:80px;
-        }
-        display: inline-block;
-        img {
-          width:100px;
-          @media screen and (max-width:800px) {
-            width:80px;
-          }
-          @media screen and (max-width:600px) {
-            width:50px;
-          }
-          border-radius:50%;
-        }
-      }
-      .name {
-        @include title-light-font();
-        color:$background-color;
-        font-size:1.2em;
-        @media screen and (max-width:600px) {
-          line-height: 1em;
-          font-size:1em;
-        }
-        @media screen and (max-width:800px) {
-          line-height: 1em;
-          font-size:1.1em;
-        }
-        vertical-align: top;
-        display: inline-block;
-      }
-    }
-    .social-buttons {
-      float:right;
-      @media screen and (max-width:2000px) {
-        position: absolute;
-        top:20px;
-        right:20px;
-      }
-      @media screen and (max-width:1000px) {
-        margin-top:0.5em;
-        display: block;
-        position: static;
-        float:none;
-      }
-      @media screen and (max-width:600px) {
-        margin-top:0.5em;
-        display: block;
-        float:none;
-      }
-      @media screen and (max-width:800px) {
-        margin-top:0.5em;
-        display: block;
-        float:none;
-      }
-    }
-    code {
-      background-color: $under-color;
-      color:$background-color;
-      @include code-font();
-      //text-shadow:0px 1px 0px rgba(0, 0, 0, 0.5);
-      border-radius: 3px;
-    }
-    .highlight {
-      code {
-        background:#555d66;
-        color:$under-color;
-      }
-      padding: 1em 2em;
-      border-radius: 10px;
-      font-size:0.7em;
-      line-height: 1.3em;
-      overflow-x: scroll;
-      background-color: #555d66;
+    width: 100%;
+    padding-top: 1.5em;
+    margin-top: 0em;
+    margin-bottom: 1em;
 
+    .title {
+      font-size: 4em;
+      line-height: 1em;
+      border: 0;
+      &:hover {
+        color: $background-color;
+      }
     }
+
     img {
-      float:left;
-      margin-right:2em;
+      width: auto;
     }
-    h1 {
-      margin-top: 1.5em;
-      @media screen and (max-width:1000px) {
-        margin-top: 0.5em;
-        font-size:2em;
-      }
-      @media screen and (max-width:600px) {
-        margin-top: 0.5em;
-        font-size:1.5em;
-      }
-      @media screen and (max-width:800px) {
-        margin-top: 0.5em;
-        font-size:2em;
-      }
-      color:$background-color;
-      @include title-font();
+
+    .soft-style {
+      font-weight: 300;
     }
-    h2 {
-      @extend h1;
-      margin-top: 1.2em;
-    }
-    &:after {
-      content:"";
-      position: absolute;
-      z-index: -2;
-      width:95%;
-      height:30px;
-      bottom:-12px;
-      left:2.5%;
-      background-color: $under-color;
-      @include transform(rotate(0.5deg));
-    }
-    &:before {
-      content:"";
-      position: absolute;
-      z-index: -2;
-      width:95%;
-      height:30px;
-      top:-12px;
-      left:2.5%;
-      background-color: $under-color;
-      @include transform(rotate(0.5deg));
-    }
-  }
-  .footer {
-    @include footer-font();
-    margin-top: 2em;
-    text-align: center;
-    font-size:1.5em;
-    width:30%;
-    @media screen and (max-width:1000px) {
-      font-size:1.5em;
-      width:100%;
-    }
-    @media screen and (max-width:800px) {
-      font-size:1.5em;
-      width:80%;
-    }
-    @media screen and (max-width:600px) {
-      font-size:1.2em;
-      width:100%;
-    }
-    margin-left: auto;
-    margin-right: auto;
-    div {
+
+    .whitepaper {
+      width: 80%;
+      margin-top: 4em;
+      color: $background-color;
+      font-size: 1.5em;
+      @include main-font();
+      line-height: 1.4em;
+
       img {
-        @media screen and (max-width:600px) {
-          width:50px;
-        }
+        float: left;
+        width: 60px;
+        margin-right: 20px;
       }
-      margin-right:0.5em;
-      color:$under-color;
-      vertical-align: top;
-      display: inline-block;
     }
-    a:hover {
-      color:$wrapper-color;
-      border-bottom:1px dotted $wrapper-color;
+
+    .footer {
+      @include title-font();
+      margin-top: 2em;
+      line-height: 1em;
+      text-align: left;
+      font-size: 1.5em;
+      margin-left: auto;
+      margin-right: auto;
+      color: $wrapper-color;
     }
   }
 
+  .wrapper {
+    order: 1;
+    flex: 0 0 67%;
+    align-self: auto;
+
+    .content {
+      @include box-sizing(border-box);
+      @include main-font();
+      @include box-sizing(border-box);
+      display: inline-block;
+      text-align: left;
+      position: relative;
+      padding: 1em;
+      padding-left: 6em;
+      padding-right: 0em;
+      font-size: 1.5em;
+      line-height: 1.5em;
+      color: $background-color;
+
+      .principles {
+        @include title-font();
+        font-size: 1.1em;
+        padding-right: 1em;
+        list-style: decimal;
+        padding-left: 2em;
+
+        li {
+          line-height: 1em;
+          border-radius: 10px;
+          text-align: left;
+          padding: .5em;
+          padding-left: 0em;
+        }
+      }
+
+      .posts {
+        list-style: none;
+        padding-left: 0;
+        @include main-font();
+        font-size: 1em;
+      }
+
+      .author {
+
+        .photo {
+          width: 110px;
+          display: inline-block;
+
+          img {
+            width: 100px;
+            border-radius: 50%;
+          }
+        }
+
+        .name {
+          @include title-light-font();
+          color: $background-color;
+          font-size: 1.2em;
+          vertical-align: top;
+          display: inline-block;
+        }
+      }
+
+      .social-buttons {
+        float: right;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      img {
+        float: left;
+        margin-right: 2em;
+      }
+
+      h1 {
+        @include title-font();
+        margin-top: 1.5em;
+        color: $background-color;
+      }
+
+      h2 {
+        @extend h1;
+        margin-top: 1.2em;
+      }
+    }
+  }
 }

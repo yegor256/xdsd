@@ -16,26 +16,30 @@
     <title>{{ page.title }}</title>
   </head>
   <body>
-    <div class="top">
-      <a href="/">
-        <img src="http://img.xdsd.org/logo.png"/>
-        eXtremely Distributed
-        <span class="soft-style">Software Development</span>
-      </a>
-    </div>
-    <div class="wrapper">
-      <div class="content">
-        {{ content }}
-      </div>
-      <div class="footer">
-        <div class="left">
-          <img src="http://img.xdsd.org/logo.png" class="icon" />
+    <div class="page-container">
+        <div class="top">
+            <a class="title" href="/">
+                <img src="http://img.xdsd.org/logo.png"/>
+                eXtremely Distributed<br/>
+                <div class="soft-style">Software Development</div>
+            </a>
+            <p class="whitepaper">
+                <a href="http://img.xdsd.org/XDSD-WhitePaper.pdf"><img src="http://img.xdsd.org/acrobat-icon.png"/></a>
+                XDSD methodology is still in R&amp;D phase.
+                In the meantime, you can read a
+                <a href="http://img.xdsd.org/XDSD-WhitePaper.pdf">White Paper (70Kb PDF)</a>
+                recently published by <a href="http://www.technoparkcorp.com">TechnoPark Corp.</a>
+            </p>
+            <div class="footer">
+                860.506.5536<br/>
+                <a href="mailto:join@xdsd.org">join@xdsd.org</a>
+            </div>
         </div>
-        <div class="right">
-          860.506.5536<br/>
-          <a href="mailto:join@xdsd.org">join@xdsd.org</a>
+        <div class="wrapper">
+          <div class="content">
+            {{ content }}
+          </div>
         </div>
-      </div>
     </div>
     <script type="text/javascript">
       var _gaq = _gaq || [];

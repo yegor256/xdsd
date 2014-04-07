@@ -1,0 +1,46 @@
+.highlight {
+
+  .kd,
+  .kt,
+  .kn {
+    font-weight:bold;
+  }
+
+  .c1 {
+    color:#777;
+  }
+}
+
+  code, pre {
+    font-family:"Source Code Pro", monospace;
+    font-weight: 400;
+    font-size: 0.8em;
+    line-height: 1.2em;
+  }
+
+  code {
+    background-color: #eee;
+    padding: 0 .3em
+  }
+
+  table.highlighttable td.linenos {
+    font-size: 1em;
+    width: 2em;
+    text-align: right
+  }
+
+  .linenodiv {
+    color:#ccc;
+    border-right: 3px solid #ccc;
+    padding-right: .5em;
+    margin-right: .2em
+  }
+
+  .linenodiv pre code {
+    background-color:inherit;
+    padding: 0
+  }
+
+  .front {
+    margin-bottom:4em
+  }
