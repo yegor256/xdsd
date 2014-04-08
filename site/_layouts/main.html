@@ -16,26 +16,48 @@
     <title>{{ page.title }}</title>
   </head>
   <body>
-    <div class="top">
-      <a href="/">
-        <img src="http://img.xdsd.org/logo.png"/>
-        eXtremely Distributed
-        <span class="soft-style">Software Development</span>
-      </a>
-    </div>
-    <div class="wrapper">
-      <div class="content">
-        {{ content }}
-      </div>
-      <div class="footer">
-        <div class="left">
-          <img src="http://img.xdsd.org/logo.png" class="icon" />
+    <div class="page-container">
+        <div class="top">
+            <div class="article-name">
+                {{ page.title }}
+            </div>
+            <div class="author">
+                <div class="photo">
+                    <img src="{{ page.author.avatar }}" class="icon" />
+                </div>
+                <div class="name">
+                    {{ page.author.name }}<br/>
+                    {{ page.date | date: "%-d %B %Y" }}
+                </div>
+            </div>
+            <div class="social-buttons">
+                <a target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')"
+                   href="http://www.facebook.com/sharer/sharer.php?u=http://www.xdsd.org{{ page.url }}"><button
+                        class="icon-button facebook"><i class="fa fa-facebook"></i></button></a>
+                <a target="_blank" onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')"
+                   href="https://twitter.com/share"><button
+                        class="icon-button twitter"><i class="fa fa-twitter"></i></button></a>
+                <a target="_blank" onclick="return !window.open(this.href, 'Google+', 'width=640,height=300')"
+                   href="https://plus.google.com/share?url=http://www.xdsd.org{{ page.url }}"><button
+                        class="icon-button google"><i class="fa fa-google-plus-square"></i></button></a>
+            </div>
+            <div class="title">
+                <a href="/">
+                    <img src="http://img.xdsd.org/logo.png"/>
+                    eXtremely Distributed<br/>
+                    <div class="soft-style">Software Development</div>
+                </a>
+            </div>
+            <div class="footer">
+                860.506.5536<br/>
+                <a href="mailto:join@xdsd.org">join@xdsd.org</a>
+            </div>
         </div>
-        <div class="right">
-          860.506.5536<br/>
-          <a href="mailto:join@xdsd.org">join@xdsd.org</a>
+        <div class="wrapper">
+          <div class="content">
+            {{ content }}
+          </div>
         </div>
-      </div>
     </div>
     <script type="text/javascript">
       var _gaq = _gaq || [];

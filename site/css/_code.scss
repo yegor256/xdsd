@@ -1,0 +1,52 @@
+.highlight {
+  color: #000;
+  font-size: .9em;
+  line-height: 1.3em;
+  width: 100%;
+  overflow: hidden;
+
+  .kd,
+  .kt,
+  .kn {
+    font-weight: 600;
+  }
+
+  .c1 {
+    color:#777;
+  }
+}
+
+code, pre {
+  @include code-font();
+  font-weight: 400;
+}
+
+code {
+  background-color: #eee;
+  padding: 0 .3em;
+}
+
+div.scrollable {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+table.highlighttable td.linenos {
+  font-size: .9em;
+  line-height: 1.3em;
+  width: 2em;
+  text-align: right;
+}
+
+.linenodiv {
+  color:#ccc;
+  border-right: 3px solid #ccc;
+  padding-right: .5em;
+  margin-right: .2em;
+}
+
+.linenodiv pre code {
+  background-color:inherit;
+  padding: 0;
+}
+
