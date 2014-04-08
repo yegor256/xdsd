@@ -8,7 +8,7 @@ module Xdsd
       @title = opts[2].strip
     end
     def render(context)
-      "<div class='picture'><img src='#{@src}' style='width:#{@width}px;'/><div class='title'>&copy; #{@title}</div></div>\n\n"
+      "<div class='picture'><img src='#{@src}' style='width:#{@width}px;'/><div class='caption'>&copy; #{@title}</div></div>\n\n"
     end
   end
 end

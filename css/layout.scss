@@ -147,3 +147,15 @@ h2 {
   margin-top: 1em;
   font-size: 1.6em;
 }
+
+.picture {
+  position: relative;
+}
+
+.caption {
+  position: absolute;
+  font-size: .8em;
+  left: .5em;
+  bottom: .5em;
+  @include title-light-font();
+}
