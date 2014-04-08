@@ -19,15 +19,17 @@
         <div class="title">
           {{ page.title }}
         </div>
-        <div class="author">
-          <div class="photo">
-            <img src="{{ page.author.avatar }}" class="icon" />
+        {% if page.author %}
+          <div class="author">
+            <div class="photo">
+              <img src="{{ page.author.avatar }}" class="icon" />
+            </div>
+            <div class="name">
+              {{ page.author.name }}<br/>
+              {{ page.date | date: "%-d %B %Y" }}
+            </div>
           </div>
-          <div class="name">
-            {{ page.author.name }}<br/>
-            {{ page.date | date: "%-d %B %Y" }}
-          </div>
-        </div>
+        {% endif %}
         <ul class="signs">
           <li>
             <a class="share" target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')"
