@@ -10,7 +10,7 @@ git clone git@github.com:yegor256/xdsd.git ${CLONE}
 cd ${CLONE}
 git checkout gh-pages
 rm -rf *
-cp -R $SRC/* .
+cp -R $SRC/_site/* .
 rm -f README.md
 rm -f deploy.sh
 
