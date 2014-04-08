@@ -18,18 +18,36 @@
   <body>
     <div class="page-container">
         <div class="top">
-            <a class="title" href="/">
-                <img src="http://img.xdsd.org/logo.png"/>
-                eXtremely Distributed<br/>
-                <div class="soft-style">Software Development</div>
-            </a>
-            <p class="whitepaper">
-                <a href="http://img.xdsd.org/XDSD-WhitePaper.pdf"><img src="http://img.xdsd.org/acrobat-icon.png"/></a>
-                XDSD methodology is still in R&amp;D phase.
-                In the meantime, you can read a
-                <a href="http://img.xdsd.org/XDSD-WhitePaper.pdf">White Paper (70Kb PDF)</a>
-                recently published by <a href="http://www.technoparkcorp.com">TechnoPark Corp.</a>
-            </p>
+            <div class="article-name">
+                {{ page.title }}
+            </div>
+            <div class="author">
+                <div class="photo">
+                    <img src="{{ page.author.avatar }}" class="icon" />
+                </div>
+                <div class="name">
+                    {{ page.author.name }}<br/>
+                    {{ page.date | date: "%-d %B %Y" }}
+                </div>
+            </div>
+            <div class="social-buttons">
+                <a target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')"
+                   href="http://www.facebook.com/sharer/sharer.php?u=http://www.xdsd.org{{ page.url }}"><button
+                        class="icon-button facebook"><i class="fa fa-facebook"></i></button></a>
+                <a target="_blank" onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')"
+                   href="https://twitter.com/share"><button
+                        class="icon-button twitter"><i class="fa fa-twitter"></i></button></a>
+                <a target="_blank" onclick="return !window.open(this.href, 'Google+', 'width=640,height=300')"
+                   href="https://plus.google.com/share?url=http://www.xdsd.org{{ page.url }}"><button
+                        class="icon-button google"><i class="fa fa-google-plus-square"></i></button></a>
+            </div>
+            <div class="title">
+                <a href="/">
+                    <img src="http://img.xdsd.org/logo.png"/>
+                    eXtremely Distributed<br/>
+                    <div class="soft-style">Software Development</div>
+                </a>
+            </div>
             <div class="footer">
                 860.506.5536<br/>
                 <a href="mailto:join@xdsd.org">join@xdsd.org</a>

@@ -1,9 +1,14 @@
 .highlight {
+  color: #000;
+  font-size: .9em;
+  line-height: 1.3em;
+  width: 100%;
+  overflow: hidden;
 
   .kd,
   .kt,
   .kn {
-    font-weight:bold;
+    font-weight: 600;
   }
 
   .c1 {
@@ -11,36 +16,37 @@
   }
 }
 
-  code, pre {
-    font-family:"Source Code Pro", monospace;
-    font-weight: 400;
-    font-size: 0.8em;
-    line-height: 1.2em;
-  }
+code, pre {
+  @include code-font();
+  font-weight: 400;
+}
 
-  code {
-    background-color: #eee;
-    padding: 0 .3em
-  }
+code {
+  background-color: #eee;
+  padding: 0 .3em;
+}
 
-  table.highlighttable td.linenos {
-    font-size: 1em;
-    width: 2em;
-    text-align: right
-  }
+div.scrollable {
+  width: 100%;
+  overflow-x: scroll;
+}
 
-  .linenodiv {
-    color:#ccc;
-    border-right: 3px solid #ccc;
-    padding-right: .5em;
-    margin-right: .2em
-  }
+table.highlighttable td.linenos {
+  font-size: .9em;
+  line-height: 1.3em;
+  width: 2em;
+  text-align: right;
+}
 
-  .linenodiv pre code {
-    background-color:inherit;
-    padding: 0
-  }
+.linenodiv {
+  color:#ccc;
+  border-right: 3px solid #ccc;
+  padding-right: .5em;
+  margin-right: .2em;
+}
 
-  .front {
-    margin-bottom:4em
-  }
+.linenodiv pre code {
+  background-color:inherit;
+  padding: 0;
+}
+

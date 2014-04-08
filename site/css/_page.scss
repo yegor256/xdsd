@@ -1,117 +1,187 @@
-@include keyframes(showSlowly) {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 .page-container {
   @include box-sizing(border-box);
   display: flex;
-  flex-direction: row;
   margin-left: auto;
   margin-right: auto;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-content: stretch;
-  align-items: stretch;
-  width: 80%;
+  align-items: flex-start;
+  @media screen and (max-width:2000px) {
+    flex-direction: row;
+    width: 80%;
+  }
+  @media screen and (max-width:1300px) {
+    flex-direction: row;
+    width: 90%;
+  }
+  @media screen and (max-width:1000px) {
+    flex-direction: row;
+    width: 100%;
+  }
+  @media screen and (max-width:800px) {
+    flex-direction: column;
+    width: 100%;
+  }
 
   .top {
     order: 0;
-    flex: 0 0 33%;
-    align-self: auto;
-    @include animation-duration(1s);
-    @include animation-fill-mode(forwards);
-    @include animation-name(showSlowly);
-    @include transition(all .1s ease-in-out);
-    @include animation-timing-function(ease);
+    flex: 0 1 30%;
+    width: 100%;
+    text-align: right;
+    padding-right: 2em;
     @include title-font();
     @include box-sizing(border-box);
-    border-right: 1px solid lightgray;
-    color: #edf3f7;
-    opacity: 0;
-    text-align: left;
-    width: 100%;
-    padding-top: 1.5em;
-    margin-top: 0em;
-    margin-bottom: 1em;
+    align-self: stretch;
+    @media screen and (max-width:800px) {
+      text-align: center;
+      flex: 0 1 auto;
+      padding-right: 5em;
+      padding-left: 5em;
+    }
 
-    .title {
-      font-size: 4em;
+    .article-name {
+      margin-top: 3em;
+      margin-bottom: 1em;
       line-height: 1em;
-      border: 0;
-      &:hover {
-        color: $background-color;
+      font-size: 3em;
+      color: $background-color;
+      @media screen and (max-width:800px) {
+        margin-top: .2em;
+        margin-bottom: .2em;
+        font-size: 2em;
       }
     }
 
-    img {
-      width: auto;
+    .author {
+
+      .photo {
+        display: inline-block;
+
+        img {
+          width: 80px;
+          @media screen and (max-width:800px) {
+            width: 40px;
+          }
+          border-radius: 50%;
+        }
+      }
+
+      .name {
+        @include title-light-font();
+        color: $background-color;
+        font-size: 1.7em;
+        vertical-align: top;
+        display: inline-block;
+        @media screen and (max-width:800px) {
+          font-size: 1em;
+        }
+      }
     }
 
-    .soft-style {
-      font-weight: 300;
+    .social-buttons {
     }
 
-    .whitepaper {
-      width: 80%;
+    .title {
       margin-top: 4em;
-      color: $background-color;
       font-size: 1.5em;
-      @include main-font();
-      line-height: 1.4em;
+      @include title-font();
+      line-height: 1em;
+      @media screen and (max-width:800px) {
+        //border: 10px solid red;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 1em;
+      }
+
+      a {
+        border: 0;
+        &:hover {
+          color: $background-color;
+        }
+      }
 
       img {
-        float: left;
-        width: 60px;
-        margin-right: 20px;
+        width: 30px;
+        @media screen and (max-width:800px) {
+          width: 16px;
+        }
+      }
+
+      .soft-style {
+        font-weight: 300;
       }
     }
 
     .footer {
-      @include title-font();
-      margin-top: 2em;
-      line-height: 1em;
-      text-align: left;
-      font-size: 1.5em;
+      @include main-font();
       margin-left: auto;
       margin-right: auto;
       color: $wrapper-color;
+      text-align: right;
+      line-height: 1em;
+      font-size: 1.5em;
+      padding-top: 1em;
+      @media screen and (max-width:800px) {
+        text-align: center;
+        line-height: 1em;
+        font-size: 1em;
+        padding-top: 2em;
+      }
     }
   }
 
   .wrapper {
     order: 1;
-    flex: 0 0 67%;
-    align-self: auto;
+    flex: 0 1 70%;
+    align-self: stretch;
+    border-left: 1px solid lightgray;
+    @include box-sizing(border-box);
+    @media screen and (max-width:800px) {
+      flex: 0 1 auto;
+      border-left: 0;
+    }
 
     .content {
-      @include box-sizing(border-box);
       @include main-font();
       @include box-sizing(border-box);
       display: inline-block;
       text-align: left;
+      width: 100%;
       position: relative;
-      padding: 1em;
-      padding-left: 6em;
-      padding-right: 0em;
+      padding-left: 3em;
+      padding-right: 2em;
       font-size: 1.5em;
       line-height: 1.5em;
       color: $background-color;
+      @include main-font();
+      @media screen and (max-width:800px) {
+        padding-left: .5em;
+        padding-right: .5em;
+        padding-top: 1.5em;
+        font-size: 1.2em;
+        line-height: 1.4em;
+      }
+
+      .whitepaper {
+        width: 100%;
+        color: $background-color;
+        @include main-font();
+
+        img {
+          float: left;
+          width: 60px;
+          margin-right: 20px;
+        }
+      }
 
       .principles {
         @include title-font();
         font-size: 1.1em;
-        padding-right: 1em;
         list-style: decimal;
         padding-left: 2em;
 
         li {
-          line-height: 1em;
           border-radius: 10px;
           text-align: left;
           padding: .5em;
@@ -119,56 +189,24 @@
         }
       }
 
-      .posts {
-        list-style: none;
-        padding-left: 0;
-        @include main-font();
-        font-size: 1em;
-      }
-
-      .author {
-
-        .photo {
-          width: 110px;
-          display: inline-block;
-
-          img {
-            width: 100px;
-            border-radius: 50%;
-          }
-        }
-
-        .name {
-          @include title-light-font();
-          color: $background-color;
-          font-size: 1.2em;
-          vertical-align: top;
-          display: inline-block;
-        }
-      }
-
-      .social-buttons {
-        float: right;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-      }
-
       img {
         float: left;
         margin-right: 2em;
       }
-
-      h1 {
-        @include title-font();
-        margin-top: 1.5em;
-        color: $background-color;
-      }
-
-      h2 {
-        @extend h1;
-        margin-top: 1.2em;
-      }
-    }
+   }
   }
+}
+
+h1 {
+  @include title-font();
+  margin-top: 1.5em;
+  color: $background-color;
+  font-size: 3em;
+  line-height: 1em;
+}
+
+h2 {
+  @extend h1;
+  margin-top: 1em;
+  font-size: 2em;
 }

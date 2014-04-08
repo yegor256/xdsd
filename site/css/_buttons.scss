@@ -3,18 +3,18 @@
   padding: .4em;
   width: 2em;
   font-size: 1.3em;
-  @media screen and (max-width:600px) {
-    padding: .2em;
-    padding-top: .4em;
-    width: 2em;
-    font-size: .7em;
-  }
   color: #fff;
   outline: 0;
   border: 0;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   position: relative;
+  @media screen and (max-width: 800px) {
+    padding: .2em;
+    padding-top: .4em;
+    width: 2em;
+    font-size: 1em;
+  }
 
   &:hover {
     top: -2px;
@@ -25,6 +25,7 @@
     top: 5px;
   }
 }
+
 .facebook {
   @extend %icon-button;
   background-color: #44619c;

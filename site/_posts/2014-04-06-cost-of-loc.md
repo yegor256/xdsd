@@ -25,7 +25,7 @@ rest in CSS, XML, Ruby, and something else. I'm counting only non-empty and
 non-comment lines of code, using
 [`cloc.pl`](http://cloc.sourceforge.net/).
 
-It was a commercial projects, so I can't disclose its name.
+It was commercial projects, so I can't disclose their names.
 
 The team was co-located in one office in Europe, where everybody were
 working from nine till five. We had meetings, lunches, desk-to-desk chats,

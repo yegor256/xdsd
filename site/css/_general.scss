@@ -1,22 +1,22 @@
 $main-font: 'Cambria', serif;
 $main-bold-font: 'Cambria-Bold', sans-serif;
 $title-font: 'HNC', sans-serif;
-$code-font: 'Source Code Pro', ;
+$code-font: 'Source Code Pro', 'Courier New';
 $footer-font: 'Ubuntu', sans-serif;
 $background-color: #475059;
 $wrapper-color: #717a82;
 $under-color: #aeb9bf;
 
 body {
-  background-color: rgba(245, 245, 245, 0.98);
+  background-color: #fff;
   @include main-font();
   padding: 1.5em;
-  @media screen and (max-width:600px) {
-    padding: .5em;
-  }
   margin: 0;
   position: relative;
   overflow-x: hidden;
+  @media screen and (max-width:600px) {
+    padding: .5em;
+  }
 }
 
 a,

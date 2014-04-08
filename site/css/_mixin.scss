@@ -3,10 +3,6 @@
   font-weight: 400;
 }
 
-@mixin main-bold-font() {
-  font-family: $main-bold-font;
-}
-
 @mixin title-font() {
   font-family: $title-font;
   font-weight: 600;
@@ -19,21 +15,5 @@
 
 @mixin code-font() {
   font-family: $code-font;
-  font-weight: 400;
-}
 
-@mixin footer-font() {
-  font-family: $footer-font;
-  font-weight: 400;
-}
-
-@mixin column-break-inside($type) {
-  -webkit-column-break-inside: $type;
-  -moz-column-break-inside: $type;
-  -o-column-break-inside: $type;
-  column-break-inside: $type;
- -moz-page-break-inside: $type;
-  page-break-inside: $type;
-  break-inside:$type;
-  -moz-break-inside:$type;
 }
