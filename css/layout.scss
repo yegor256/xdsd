@@ -150,12 +150,13 @@ h2 {
 
 .picture {
   position: relative;
-}
-
-.caption {
-  position: absolute;
-  font-size: .8em;
-  left: .5em;
-  bottom: .5em;
-  @include title-light-font();
+  .caption {
+    position: absolute;
+    font-size: .8em;
+    line-height: 1em;
+    left: .5em;
+    bottom: 1em;
+    background-color: rgba(0, 0, 0, .7);
+    @include title-light-font();
+  }
 }
