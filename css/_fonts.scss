@@ -1,0 +1,137 @@
+/**
+ * Copyright (c) 2009, xdsd.org
+ * All rights reserved. THIS IS PRIVATE SOFTWARE.
+ *
+ * Redistribution and use in source and binary forms, with or without modification, are PROHIBITED
+ * without prior written permission from the author. This product may NOT be used anywhere
+ * and on any computer except the server platform of twentytags.com. located at
+ * www.twentytags.com. If you received this code occasionally and without intent to use
+ * it, please report this incident to the author by email: privacy@twentytags.com
+ *
+ * @author Max Bugaenko <max.bugaenko@gmail.com>
+ * @copyright Copyright (c) xdsd.org, 2014
+ * @version $Id$
+ */
+
+$main-font: 'Cambria', serif;
+$main-bold-font: 'Cambria-Bold', sans-serif;
+$title-font: 'HNC', sans-serif;
+$code-font: 'Source Code Pro', 'Courier New';
+
+@mixin main-font() {
+  font-family: $main-font;
+  font-weight: 400;
+}
+
+@mixin title-font() {
+  font-family: $title-font;
+  font-weight: 600;
+}
+
+@mixin title-light-font() {
+  font-family: $title-font;
+  font-weight: 300;
+}
+
+@mixin code-font() {
+  font-family: $code-font;
+}
+
+@import url('http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600');
+
+@font-face {
+  font-family: "HNC";
+  font-weight: 100;
+  src: url(https://s.flipboard.com/mags/fonts/HelveticaNeueCondensedUltraLight-b1643142.woff)
+    format("woff"),
+    url(https://s.flipboard.com/mags/fonts/HelveticaNeueCondensedUltraLight-911598d6.ttf)
+    format("truetype");
+}
+
+@font-face{
+  font-family: "HNC";
+  font-weight: 200;
+  src: url(https://s.flipboard.com/mags/fonts/HelveticaNeueCondensedThin-e8fd1378.woff)
+    format("woff"),
+    url(https://s.flipboard.com/mags/fonts/HelveticaNeueCondensedThin-f9094e63.ttf)
+    format("truetype");
+}
+
+@font-face{
+  font-family: "HNC";
+  font-weight: 300;
+  src: url(https://s.flipboard.com/mags/fonts/HelveticaNeueCondensedLight-bcd62347.woff)
+    format("woff"),
+    url(https://s.flipboard.com/mags/fonts/HelveticaNeueCondensedLight-3a6fcb2e.ttf)
+    format("truetype");
+}
+
+@font-face{
+  font-family: "HNC";
+  font-weight: 400;
+  src: url(https://s.flipboard.com/mags/fonts/HelveticaNeueCondensed-a8bae095.woff)
+    format("woff"),
+    url(https://s.flipboard.com/mags/fonts/HelveticaNeueCondensed-59790d27.ttf)
+    format("truetype");
+}
+
+@font-face{
+  font-family: "HNC";
+  font-weight: 600;
+  src: url(https://s.flipboard.com/mags/fonts/HelveticaNeueCondensedMedium-63796dcb.woff)
+    format("woff"),
+    url(https://s.flipboard.com/mags/fonts/HelveticaNeueCondensedMedium-930f0aa0.ttf)
+    format("truetype");
+}
+
+@font-face{
+  font-family: "HNC";
+  font-weight: 700;
+  src: url(https://s.flipboard.com/mags/fonts/HelveticaNeueCondensedBold-572a7194.woff)
+    format("woff"),
+    url(https://s.flipboard.com/mags/fonts/HelveticaNeueCondensedBold-b45199ea.ttf);
+}
+
+@font-face {
+  font-family: 'Cambria-BoldItalic';
+  src: url('http://img.yegor256.com/fonts/2A901D_0_0.eot');
+  src: url('http://img.yegor256.com/fonts/2A901D_0_0.eot?#iefix')
+    format('embedded-opentype'),
+    url('http://img.yegor256.com/fonts/2A901D_0_0.woff')
+    format('woff'),
+    url('http://img.yegor256.com/fonts/2A901D_0_0.ttf')
+    format('truetype');
+}
+
+@font-face {
+  font-family: 'Cambria-Bold';
+  src: url('http://img.yegor256.com/fonts/2A901D_1_0.eot');
+  src: url('http://img.yegor256.com/fonts/2A901D_1_0.eot?#iefix')
+    format('embedded-opentype'),
+    url('http://img.yegor256.com/fonts/2A901D_1_0.woff')
+    format('woff'),
+    url('http://img.yegor256.com/fonts/2A901D_1_0.ttf')
+    format('truetype');
+}
+
+@font-face {
+  font-family: 'Cambria';
+  src: url('http://img.yegor256.com/fonts/2A901D_2_0.eot');
+  src: url('http://img.yegor256.com/fonts/2A901D_2_0.eot?#iefix')
+    format('embedded-opentype'),
+    url('http://img.yegor256.com/fonts/2A901D_2_0.woff')
+    format('woff'),
+    url('http://img.yegor256.com/fonts/2A901D_2_0.ttf')
+    format('truetype');
+}
+
+@font-face {
+  font-family: 'Cambria-Italic';
+  src: url('http://img.yegor256.com/fonts/2A901D_3_0.eot');
+  src: url('http://img.yegor256.com/fonts/2A901D_3_0.eot?#iefix')
+    format('embedded-opentype'),
+    url('http://img.yegor256.com/fonts/2A901D_3_0.woff')
+    format('woff'),
+    url('http://img.yegor256.com/fonts/2A901D_3_0.ttf')
+    format('truetype');
+}
