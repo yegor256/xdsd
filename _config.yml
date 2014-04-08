@@ -1,0 +1,14 @@
+name: xdsd
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+pygments: true
+permalink: :year/:month/:day/:title.html
+
+# see https://github.com/noct/jekyll-sass
+gems: ['jekyll-sass', 'jekyll/timeago']
+sass:
+  style: expanded
+  deploy_style: compressed
+  compile_in_place: false
+
