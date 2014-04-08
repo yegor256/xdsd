@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-SRC=$(pwd)/site
+SRC=$(pwd)
 cd ${SRC}
 rm -rf _site
 jekyll build
@@ -10,7 +10,9 @@ git clone git@github.com:yegor256/xdsd.git ${CLONE}
 cd ${CLONE}
 git checkout gh-pages
 rm -rf *
-cp -R $SRC/_site/* .
+cp -R $SRC/* .
+rm -f README.md
+rm -f deploy.sh
 
 git add .
 git commit -am "new site version"
