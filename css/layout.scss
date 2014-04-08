@@ -159,3 +159,8 @@ h2 {
     @include title-light-font();
   }
 }
+
+.posts {
+  list-style: none;
+  padding-left: 0;
+}
