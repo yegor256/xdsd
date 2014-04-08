@@ -28,19 +28,30 @@
             {{ page.date | date: "%-d %B %Y" }}
           </div>
         </div>
-        <div class="xdsd">
-          <div class="logo">
+        <ul class="signs">
+          <li>
+            <a class="share" target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')"
+              style="color: #44619c;"
+              href="http://www.facebook.com/sharer/sharer.php?u=http://www.xdsd.org{{ page.url }}"><i class="fa fa-facebook-square"></i></a>
+            <a class="share" target="_blank" onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')"
+              style="color: #509abf;"
+              href="https://twitter.com/share?url=http://www.xdsd.org{{ page.url }}&amp;text={{ page.title }}"><i class="fa fa-twitter-square"></i></button></a>
+            <a class="share" target="_blank" onclick="return !window.open(this.href, 'Google+', 'width=640,height=300')"
+              style="color: #d42020;"
+              href="https://plus.google.com/share?url=http://www.xdsd.org{{ page.url }}"><i class="fa fa-google-plus-square"></i></a>
+          </li>
+          <li>
             <a href="/">
               <img src="http://img.xdsd.org/logo.png" style="width: 30px;"/>
               <strong>eXtremely Distributed</strong><br/>
               <div class="soft-style">Software Development</div>
             </a>
-          </div>
-          <div class="phone">
+          </li>
+          <li>
             860.506.5536<br/>
             <a href="mailto:join@xdsd.org">join@xdsd.org</a>
-          </div>
-        </div>
+          </li>
+        </ul>
       </aside>
       <article class="content">
         {{ content }}
