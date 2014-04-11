@@ -8,20 +8,28 @@
     <title>xdsd</title>
     <link>http://www.xdsd.org/</link>
     <description>RSS feed for xdsd</description>
-    <pubDate>Wed, 04 Mar 2009 17:52:26 +0100</pubDate>
+    <pubDate>Fri, 11 Apr 2014 00:00:00 +0200</pubDate>
+    <item>
+      <title>How much do you pay per line of code?</title>
+      <link>http://www.xdsd.org//2014/04/11/cost-of-loc.html</link>
+      <description>&lt;p&gt;Yes, I know, &amp;quot;line of code&amp;quot; (LoC)
+is a &lt;a href=&quot;http://stackoverflow.com/questions/966800/mythical-man-month-10-lines-per-developer-day-how-close-on-large-projects&quot;&gt;very wrong metric&lt;/a&gt;.
+There are &lt;a href=&quot;http://blog.codinghorror.com/diseconomies-of-scale-and-lines-of-code/&quot;&gt;tons of articles&lt;/a&gt;
+written about it, as well as famous books.&lt;/p&gt;
+</description>
+      <pubDate>Fri, 11 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://www.xdsd.org//2014/04/11/cost-of-loc.html</guid>
+      <dc:date>2014-04-11T00:00:00+02:00</dc:date>
+    </item>
     <item>
       <title>Puzzle Driven Development</title>
       <link>http://www.xdsd.org//pdd</link>
-      <description>&lt;p&gt;PDD is a method of breaking down a programming task into
-smaller ones, and enabling their implementation in parallel.
-PDD method is widely used in XDSD methodology. The method is
-pending USPTO patent
-(application no. &lt;a href=&quot;http://www.google.com/patents/US20120023476&quot;&gt;12/840,306&lt;/a&gt;).&lt;/p&gt;
+      <description>&lt;p&gt;PDD, or Puzzle Driven Development, is a method used to break down programming tasks into smaller ones and enable their implementation in parallel. The PDD method is used widely in XDSD methodology. The method is pending a USPTO patent (application no. &lt;a href=&quot;http://www.google.com/patents/US20120023476&quot;&gt;12/840,306&lt;/a&gt;).&lt;/p&gt;
 </description>
       <pubDate>Wed, 04 Mar 2009 17:52:26 +0100</pubDate>
       <guid>http://www.xdsd.org//pdd</guid>
       <dc:date>2009-03-04T17:52:26+01:00</dc:date>
     </item>
-    <dc:date>2009-03-04T17:52:26+01:00</dc:date>
+    <dc:date>2014-04-11T00:00:00+02:00</dc:date>
   </channel>
 </rss>
