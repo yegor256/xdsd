@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Management By Disturbance"
+title: "PDD, Management By Disturbance"
 date: 2014-04-07
 author:
   name: Yegor Bugayenko
@@ -46,6 +46,11 @@ The goal is to complete the task and get paid, as usual.
 Of course, the whole process is driven by the spirit of
 [PDD]({% post_url 2009/2009-03-04-pdd %}).
 
+
+
+Let's assume that a "project" is something that satisfies
+a number of constraints or rules. Like a living organism
+that
 The job of a Project Manager is to keep the project in a stable
 state, which means (depending on the project, of course):
 
@@ -75,18 +80,38 @@ do it myself, and want to break this
 
 ## System Analyst
 
-I'm a requirements analyst.
+TBD...
 
 ## Architect
 
-I'm an architect and my task is to implement a requirement, specified
-formally in SRS, saying "User can download TGZ Archive".
+I'm an architect and my task is to implement a requirement formally specified
+in the SRS. PM is expecting a working feature from me, which I can deliver
+only when the architecture is clear, classes are designed and implemented.
 
-To implement this feature I need
+I can introduce the following puzzles:
+
+ * SRS doesn't explain requirements properly
+ * UML diagrams are not clear enough
+ * Components are not implemented
+ *
+
+When all of my puzzles are resolved, I can get back to the main task
+and finish feature implementation. Obviously, this may take long time,
+days or even weeks. But the cost of the main task is less than an hour.
+What is the point of all this hard work? I'll earn my hours from
+all that bugs reported.
+
+Once again, my main task will be closed and paid when System Analyst
+changes its state to "implemented" in the SRS.
 
 ## Designer
 
-## Implementer (Programmer)
+TBD...
+
+## Programmer
+
+TBD...
 
 ## Tester
 
+TBD...
