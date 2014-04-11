@@ -12,3 +12,6 @@ sass:
   deploy_style: compressed
   compile_in_place: false
 
+# https://github.com/agelber/jekyll-rss
+url: http://www.xdsd.org/
+rss_name: rss.xml
