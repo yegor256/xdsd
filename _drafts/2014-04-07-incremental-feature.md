@@ -64,23 +64,31 @@ to return the project to the stable state. While resolving them
 you're introducing new instability, submitting new bugs, leaving `@todo`
 puzzles in project documents, etc.
 
-## Product Manager
-
-Someone submits a feature request, which sounds like "hey, I think it
-would be good to give our users an ability to download all files together
-in one click, can you do this please?"
-
-I'm a product manager (or a business analyst), and my task is make project
-sponsor happy. She will become happy as soon as
-our users get an ability to download all their files in one click. The
-
-I'm working with a software requirements document. I want to change
-requirements in a way that they explain this new feature, in details. I can't
-do it myself, and want to break this
-
 ## System Analyst
 
-TBD...
+A product owner submits an informal feature request, which usually
+starts with "it would be nice to have..." I'm a system analyst and my
+job is to translate her English words into formal specifications in SRS,
+understandable both by programmers and herself. It's not my responsibility
+to implement the feature.
+
+My task is done when a new version of the SRS is signed by the
+Change Control Board. I'm an interpreter of product owners, translating
+from their language to a formal language of the SRS document.
+
+Besides feature requests from product owners I often receive
+complains about the quality of SRS. The document may be not clear
+enough for any member of the team. It's my job to resolve that problems
+and fix the SRS.
+
+In both cases (a feature request or a bug) I can make changes to the
+SRS myself immediately, if I have enough time. However, it's not always
+possible. In that case I will simply introduce new puzzles, and will wait
+for their resolution.
+
+However, I don't want the product owner to wait for that puzzles resolution.
+Moreover, I don't know when will they be resolved.
+
 
 ## Architect
 
@@ -104,13 +112,16 @@ all that bugs reported.
 Once again, my main task will be closed and paid when System Analyst
 changes its state to "implemented" in the SRS.
 
+
 ## Designer
 
 TBD...
 
+
 ## Programmer
 
 TBD...
+
 
 ## Tester
 
