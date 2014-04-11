@@ -8,8 +8,8 @@ module Xdsd
       @title = opts[2].strip
     end
     def render(context)
-      "<figure><img src='#{@src}' style='width:#{@width}px;'/>" +
-      "<figcaption>#{@title}</figcaption></figure>\n\n"
+      "<figure><img src='#{CGI::escapeHTML @src}' style='width:#{@width}px;'/>" +
+      "<figcaption>#{CGI::escapeHTML @title}</figcaption></figure>\n\n"
     end
   end
 end

@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "PDD, Management By Disturbance"
+title: "PDD by Roles"
 date: 2014-04-07
 author:
   name: Yegor Bugayenko
@@ -10,107 +10,170 @@ disqus: true
 tags: architecture feature pdd process
 ---
 
-In this (supposed to be) short article I'll explain how a high-level
-functional requirement should be transferred through all disciplines, until
-being fully implemented in source code, tested and delivered. In other
-words, someone is saying "I want this new feature, ASAP!", and in some time
-we have it available for end-users.
+In this article I'll try to show a project being managed
+with a spirit of Puzzle Driven Development (PDD), from points
+of view of different project members. There are six key roles
+in any software team:
 
-Let's follow a traditional
-[RUP](http://en.wikipedia.org/wiki/IBM_Rational_Unified_Process)-enspired
-list of disciplines:
+ * Project Manager &mdash; gives tasks and pays on completion
+ * System Analyst &mdash; understands product owners and documents their ideas
+ * Architect &mdash; defines how system components interact
+ * Designer &mdash; implements most complex components
+ * Programmer &mdash; implements all components
+ * Tester &mdash; finds and reports functional bugs
 
-{% picture http://img.xdsd.org/2014/04/rup-chart.png 586 IBM, Overall architecture of the Rational Unified Process %}
+Everybody, except a project manager, affect the project in two
+ways: they fix it and they break it at the same time. Let me explain
+by a simple example.
 
-In simple words, this diagrams says that every feature should be:
+## Fix and Break
 
- * analyzed from business point of view
- * formally documented in requirements
- * visualized in architecture
- * designed in components and modules
- * implemented in classes and unit tests
- * manually tested, and
- * deployed to production
+Let's assume for the sake of simplicity that a project is a simple
+software tool written by myself for my close friend. I created the
+first draft version 0.0.1 and delivered it to him. For me, the project
+is done. I've completed my work, and hopefully will never get
+back to it again.
 
-Now, the question is: how to do these seven disciplines in small increments,
-delivering a working system after every one of them. Truly incremental
-process means that we can stop after every micro step and have a working
-system. Moreover, we should be able to switch people between tasks. And,
-of course, we should be able to implement multiple features in parallel.
+However, the reality is different. I'm getting a call from my friend,
+and he is saying that a few bugs are found in the tool. He is asking me
+to fix them. Now I can see that my project is not done. It's broken.
+It has a few bugs in it. A few tasks to finish.
 
-Let's discuss disciplines one by one. I'll name the next seven sections by the
-names of roles mainly involved produced by every discipline. In every section I'll
-explain from the point of view of a person, who got a task assigned to her.
-The goal is to complete the task and get paid, as usual.
+I'm going to fix the project, by removing the bugs. I implement
+a new version of the software, name it 0.0.2 and ship it to my friend. Again,
+my project is done. It is fixed and should be closed.
 
-Of course, the whole process is driven by the spirit of
-[PDD]({% post_url 2009/2009-03-04-pdd %}).
+This scenario will be repeated again and again until my friend stops
+calling me. In other words, until he stops breaking my project.
 
+It is obvious that the bigger the breakage introduced by my friend into
+my project, the higher the quality of the software delivered at the end. Version
+0.0.1 was a very preliminary version, although I considered it final at
+the beginning. In a few months, when hundreds of bugs are reported and
+fixed, version 3.5.17 will be much more mature and stable.
 
+This is the result of this "fix and break" approach.
 
-Let's assume that a "project" is something that satisfies
-a number of constraints or rules. Like a living organism
-that
-The job of a Project Manager is to keep the project in a stable
-state, which means (depending on the project, of course):
+## Project Manager
 
- * all requirements are specified, implemented and delivered
- * requirements specification is non-ambiguous
- * all bugs are fixed
- * all `@todo` puzzles are resolved and removed
+The job of a project manager is to do as much as possible
+in order to fix the project. He has to use time and money in order
+to remove all bugs and inconsistencies, and return the project back
+to the "fixed" state. By saying "bugs" I mean more than just
+software errors, but also:
 
-The Project Manager gives you tasks that he needs to be done, in order
-to return the project to the stable state. While resolving them
-you're introducing new instability, submitting new bugs, leaving `@todo`
-puzzles in project documents, etc.
+ * unclear or ambiguous requirements
+ * not yet implemented requirements/features
+ * functional and non-functional bugs
+ * lack of test coverage
+ * unresolved `@todo` markers
+
+The project manager gives you tasks that he wants to be done, in order
+to fix the project, to stabilize it, to return it back to the
+bug-free state.
+
+Your job, as a member of a software team, is to help him to do the
+fixing part, and, at the same time, do your best to break the project!
+Like in the example with my friend. He was constantly breaking the
+project by reporting bugs to me. This is how he helped both of us
+to increase quality of the product.
+
+You should do the same. Always try to report new bugs when you're
+working on some feature. Remember that you should
+**fix and break** at the same time.
+
+Now let's look at the project for team members points of view.
 
 ## System Analyst
 
 A product owner submits an informal feature request, which usually
-starts with "it would be nice to have..." I'm a system analyst and my
-job is to translate her English words into formal specifications in SRS,
+starts with "it would be nice to have..." I'm a System Analyst and my
+job is to translate owner's English into formal specifications in the SRS,
 understandable both by programmers and herself. It's not my responsibility
 to implement the feature.
 
 My task is done when a new version of the SRS is signed by the
 Change Control Board. I'm an interpreter of product owners, translating
 from their language to a formal language of the SRS document.
+My only customer is the product owner. As soon as she closes the
+feature request I'll be paid.
 
 Besides feature requests from product owners I often receive
 complains about the quality of SRS. The document may be not clear
-enough for any member of the team. It's my job to resolve that problems
-and fix the SRS.
+enough for some team members. It's my job to resolve that problems
+and fix the SRS. These team members also are my customers. When they
+close their bug reports, I'll be paid.
 
 In both cases (a feature request or a bug) I can make changes to the
 SRS myself immediately, if I have enough time. However, it's not always
-possible. In that case I will simply introduce new puzzles, and will wait
-for their resolution.
+possible. I can submit a bug and wait for its resolution, but I don't
+want to keep my customers waiting.
 
-However, I don't want the product owner to wait for that puzzles resolution.
-Moreover, I don't know when will they be resolved.
+This is where [puzzle driven development]({% post_url 2009/2009-03-04-pdd %})
+is helping me. Instead of submitting bug reports, I would add
+["TBD"](http://en.wikipedia.org/wiki/To_be_announced) puzzles into
+the SRS document. They are informal replacements of strictly
+formal requirements. They satisfy my customer, since they are in
+plain English, and they are understandable by technical people.
+
+Thus, when I don't have time, I don't wait. I'm changing the SRS
+using TBDs where I can't do a proper and formal description of the
+requirements. Or where I simply don't know what exactly to write.
 
 
 ## Architect
 
-I'm an architect and my task is to implement a requirement formally specified
+I'm an architect and my task is to implement a requirement, formally specified
 in the SRS. PM is expecting a working feature from me, which I can deliver
 only when the architecture is clear, classes are designed and implemented.
 
-I can introduce the following puzzles:
+Being an architect, I'm responsible for assembling of all components
+together, and making sure that they fit. In most cases,
+I'm not creating them myself, but I'm telling everybody how they should
+be created. My work flow of artifacts is the following:
+
+{% graphviz directed graph %}
+digraph G {
+  SRS -> UML;
+  UML -> Source code;
+}
+{% endgraphviz %}
+
+I receive requirements from the SRS, produce UML diagrams and
+explain designers how to create source code according to my diagrams.
+I don't really care how source code is implemented. I'm more concerned
+about interaction of components and how well the entire architecture satisfies
+functional and non-functional (!) requirements.
+
+My task will be closed and paid when System Analyst
+changes its state to "implemented" in the SRS. System Analyst is my the only
+my customer. I have to sell my solution to him. Project Manager
+will close my task and will pay me when System Analyst changes
+the status of the functional requirement from "specified" to "implemented".
+
+The task sounds big, and I have only half an hour. Obviously,
+[puzzle driven development]({% post_url 2009/2009-03-04-pdd %})
+should help me. I will create many tickets and
+puzzles, for example:
 
  * SRS doesn't explain requirements properly
+ * Non-functional requirements are not clear
  * UML diagrams are not clear enough
  * Components are not implemented
- *
+ * Build is not automated
+ * Continuous integration is not configured
+ * Quality of code is not under control
+ * Performance testing is not automated
 
 When all of my puzzles are resolved, I can get back to the main task
 and finish feature implementation. Obviously, this may take long time,
-days or even weeks. But the cost of the main task is less than an hour.
-What is the point of all this hard work? I'll earn my hours from
-all that bugs reported.
+days or even weeks.
 
-Once again, my main task will be closed and paid when System Analyst
-changes its state to "implemented" in the SRS.
+But the cost of the main task is less than an hour.
+What is the point of all this hard work? Well, it's simple,
+I'll earn my hours from all that bugs reported.
+From this small half-an-hour task
+I will generate many tickets, every one of them will give me extra cash.
 
 
 ## Designer
