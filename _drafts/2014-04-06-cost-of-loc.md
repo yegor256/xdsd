@@ -15,7 +15,7 @@ is a [very wrong metric](http://stackoverflow.com/questions/966800/mythical-man-
 There are [tons of articles](http://blog.codinghorror.com/diseconomies-of-scale-and-lines-of-code/)
 written about it, as well as famous books.
 
-However, I want to compare two projects I've recently in which I have participated and show some very interesting numbers.
+However, I want to compare two projects in which I have participated recently and discuss some very interesting numbers.
 
 ## Project #1: Traditionally Co-located
 
@@ -86,7 +86,7 @@ What I'm trying to express with these numbers is that distributed programming is
 
 {% picture http://img.xdsd.org/2014/04/lebowski-they-did-not-receive-the-money.jpg 600 The Big Lebowski (1998) by Joel Coen %}
 
-It's not about metrics any more. It's about producing code that is a good value for your money.
+It's not about metrics any more. It's about preventing wasteful man hours and the huge waste of money that comes with them?
 
 ## Can We Do the Same?
 
