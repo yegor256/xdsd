@@ -18,15 +18,13 @@ written about it, including famous books.
 However, I want to compare two projects I've recently taken participation in,
 and show some very interesting numbers.
 
-## Project #1: traditionally co-located
+## Project #1: Traditionally Co-located
 
-The first software project I was part of,
+The first project I was part of,
 was done by a traditionally co-located group of programmers.
 There were about 20 of them (I'm not counting managers, analysts,
-product owners, SCRUM masters, etc.) The project is a web auctioning site, with
+product owners, SCRUM masters, etc.) The project was a web auctioning site, with
 pretty high traffic (over two million page views per day).
-
-{% picture http://img.xdsd.org/2014/04/brazil-crowded-office.jpg 600 Brazil (1985) by Terry Gilliam %}
 
 The code base size was about 200k lines, where 150k was PHP, 35k in JavaScript and the
 rest in CSS, XML, Ruby, and something else. I'm counting only non-empty and
@@ -35,32 +33,40 @@ non-comment lines of code, using
 
 It was a commercial project, so I can't disclose its name.
 
+{% picture http://img.xdsd.org/2014/04/brazil-crowded-office.jpg 600 Brazil (1985) by Terry Gilliam %}
+
 The team was co-located in one office in Europe, where everybody were
 working "from nine till five". We had meetings, lunches, desk-to-desk chats,
-and a lot of informal communications. All tasks were tracked in JIRA.
+and a lot of other informal communications. All tasks were tracked in JIRA.
 
-## Project #2: extremely distributed
+## Project #2: Extremely Distributed
 
 The second project was an open source Java product, developed by an
 [extremely distributed](http://www.xdsd.org)
 team of about 15 developers. We didn't have any chats, or
 any other informal communications. We discussed everything in
-tickets, using Github issue tracking. Code base was significantly smaller
+Github issues. Code base was significantly smaller
 with about 30k lines, where 90% was in Java and the rest in XML.
 
 {% picture http://img.xdsd.org/2014/04/shaolin-temple-jet-li.jpg 600 Shaolin Temple (1982) by Chang Hsin Yen %}
 
+## Maturity of Development
+
 Both projects hosted their code bases in Github. Both teams
 were developing in [feature branches](http://martinfowler.com/bliki/FeatureBranch.html),
-even small fixes.
+even for small fixes.
 
 Both teams were using build automation, continuous integration, pre-flight
-builds, static analysis, and code reviews. Both projects satisfied
-the requirements of their users. I'm mentioning this in order to emphasize
-that both produces produced valueable and useful lines of code. There was
-no garbage and almost no code duplication.
+builds, static analysis, and code reviews. This means some maturity
+of project teams.
 
-## Show me the money
+Both projects satisfied
+the requirements of their users. I'm mentioning to emphasize
+that both projects produced valuable and useful lines of code. There was
+no garbage and almost no
+[code duplication](http://en.wikipedia.org/wiki/Duplicate_code).
+
+## Show Me the Money
 
 In both projects my role was called a lead architect, and I know their
 economics. Besides that, I had access to both Git repositories, so I
@@ -79,27 +85,26 @@ The first one, in three months produced 59k new lines and removed
 29k changes in `master` branch, which in total equals to 88k. The
 project spent about 10,000 hours to produce these lines
 (20 programmers, 3 months, 170 working hours per month), which means $350k.
-Thus, the project has paid **$3.98 per LoC**.
+Thus, the project has paid
 
-Taking into account other expenses a company has to pay in order to
-maintain such a team, we can easily double this number and we'll get
-very close to what people say about their projects
-(that's all I've found in public access, so far):
-
- * $12&ndash;103: [crazyontap.com](http://www.crazyontap.com/topic.php?TopicId=242135)
- * $15&ndash;40: [betterembsw.blogspot.nl](http://betterembsw.blogspot.nl/2010/10/embedded-software-costs-15-40-per-line.html)
- * over $5: [joelonsoftware.com](http://discuss.joelonsoftware.com/default.asp?biz.5.467536.25)
+<p style="color:red;text-align:center;font-size:2em;">$3.98 per line</p>
 
 The second project, in the same three months produced 45k new lines and removed 9k, which
 in total equals to 54k. To complete this work we've spent $7k
-(approximately 350 working hours in 650 tasks).
+(approximately 350 working hours in 650 tasks). Thus, the project has paid
 
-Thus, the project has paid **$0.13 per LoC**. That also means
+<p style="color:green;text-align:center;font-size:2em;">&cent;13 per line</p>
+
+That also means
 that programmers were writing approximately 270 lines per hour
 or over 2,000 per day.
 [The Mythical Man-Month](http://en.wikipedia.org/wiki/The_Mythical_Man-Month)
 is talking about 10 lines per day, which is 200 times
 less than we saw in our project.
+
+$350k vs $7k. $3.98 vs &cent;13. What do you think?
+
+## How to Validate the Numbers?
 
 If you're curios, I'm using this script to get the numbers from git:
 
@@ -108,17 +113,22 @@ git log "--since=3 months" --pretty=tformat: --numstat \
   | gawk '{ add += $1; subs += $2; } END { printf "added: %s removed: %s\n",add,subs,loc }' -
 {% endhighlight %}
 
-You can validate the numbers, the second project is in Github:
+You can validate the numbers for the second project, it is in the Github:
 [jcabi/jcabi-github](https://github.com/jcabi/jcabi-github).
 
-## What does it all mean?
+## Conclusion
 
 What I'm trying to say by these numbers is that distributed
 programming is much more effective, money-wise, than a co-located team.
 
 Again, I can hear you saying that "line of code" is not a proper metric.
-But, come on, $0.13 vs. $3.98? Thirty times more expensive? It's not about
-numbers any more. It's about waste of money. Big time.
+But, come on, $0.13 vs. $3.98? Thirty times more expensive?
+
+{% picture http://img.xdsd.org/2014/04/lebowski-they-did-not-receive-the-money.jpg 600 The Big Lebowski (1998) by Joel Coen %}
+
+It's not about metrics any more. It's about big waste of money.
+
+## Can We Do the Same?
 
 Of course, this result can't be achieved just by telling your programmers
 to work from home and never come to the office. XDSD is not about that.
@@ -126,3 +136,11 @@ to work from home and never come to the office. XDSD is not about that.
 be followed by the entire team.
 
 And when these principles are in place &mdash; you pay thirty times less.
+
+By the way, this is what people say about their projects:
+
+ * $12&ndash;103: [crazyontap.com](http://www.crazyontap.com/topic.php?TopicId=242135)
+ * $15&ndash;40: [betterembsw.blogspot.nl](http://betterembsw.blogspot.nl/2010/10/embedded-software-costs-15-40-per-line.html)
+ * over $5: [joelonsoftware.com](http://discuss.joelonsoftware.com/default.asp?biz.5.467536.25)
+
+What are your numbers? Please post your comments below.

@@ -128,7 +128,7 @@ a:visited {
   text-align: left;
   position: relative;
   padding: 1em;
-  font-size: 1em;
+  font-size: 0.9em;
   line-height: 1.5em;
   color: $text-color;
   @include main-font();
@@ -147,9 +147,10 @@ h2 {
   font-size: 1.6em;
 }
 
-.picture {
+figure {
   position: relative;
-  .caption {
+  margin: 0;
+  figcaption {
     position: absolute;
     font-size: .8em;
     line-height: 1em;
@@ -157,6 +158,9 @@ h2 {
     bottom: 1em;
     background-color: rgba(0, 0, 0, .7);
     @include title-light-font();
+  }
+  figcaption:before {
+    content: "©";
   }
 }
 
