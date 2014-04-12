@@ -63,7 +63,7 @@ This is the result of this "fix and break" approach.
 
 ## Project Manager
 
-{% picture http://img.xdsd.org/2014/04/pulp-fiction-mr-wolf-with-cup.jpg 600 Pulp Fiction (1994) by Quentin Tarantino %}
+{% picture http://img.xdsd.org/2014/04/pulp-fiction-mr-wolf-with-cup.jpg 0 Pulp Fiction (1994) by Quentin Tarantino %}
 
 The job of a project manager is to do as much as possible
 in order to fix the project. He has to use sponsor's time and money in order
@@ -103,7 +103,7 @@ job is to translate owner's English into formal specifications in the SRS,
 understandable both by programmers and herself. It's not my responsibility
 to implement the feature.
 
-{% picture http://img.xdsd.org/2014/04/arizona-dream-two-beers-and-two-shots.png 600 Arizona Dream (1992) by Emir Kusturica %}
+{% picture http://img.xdsd.org/2014/04/arizona-dream-two-beers-and-two-shots.jpg 0 Arizona Dream (1992) by Emir Kusturica %}
 
 My task is done when a new version of the SRS is signed by the
 Change Control Board. I'm an interpreter of product owners, translating
@@ -139,6 +139,8 @@ requirements. Or where I simply don't know what exactly to write.
 I'm an architect and my task is to implement a requirement, formally specified
 in the SRS. PM is expecting a working feature from me, which I can deliver
 only when the architecture is clear, classes are designed and implemented.
+
+{% picture http://img.xdsd.org/2014/04/science-of-sleep-time-machine.jpg 0 The Science of Sleep (2006) by Michel Gondry %}
 
 Being an architect, I'm responsible for assembling of all components
 together, and making sure that they fit. In most cases,
@@ -195,6 +197,8 @@ of their tasks and the hourly rate. Designers usually do more complex
 and higher level implementations, while programmers implement all
 low-level details.
 
+{% picture http://img.xdsd.org/2014/04/pulp-fiction-vincent-and-jules.jpg 0 Pulp Fiction (1994) by Quentin Tarantino %}
+
 I'm a programmer and my task is to implement a class or a method or
 fix some functional bug. In most cases, I have only half an hour available.
 And most of the tasks are bigger than that.
@@ -223,7 +227,7 @@ I'm a tester and my primary motivation is to find bugs. This may be
 contradictory to what you've heard before, but we, in XDSD, are planning
 to find certain amount of bugs on every stage of the project.
 
-{% picture http://img.xdsd.org/2014/04/fear-and-loathing-adrenochrome.jpg 600 Fear and Loathing in Las Vegas (1998) by Terry Gilliam %}
+{% picture http://img.xdsd.org/2014/04/fear-and-loathing-adrenochrome.jpg 0 Fear and Loathing in Las Vegas (1998) by Terry Gilliam %}
 
 As as a tester, I'm receiving tasks from my project manager, which sound
 like "review feature X and find 10 bugs in it". The project manager

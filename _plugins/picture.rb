@@ -5,6 +5,9 @@ module Xdsd
       opts = markup.split(/\s+/, 3)
       @src = opts[0].strip
       @width = opts[1].strip
+      if @width == '0'
+        @width = '600'
+      end
       @title = opts[2].strip
     end
     def render(context)
