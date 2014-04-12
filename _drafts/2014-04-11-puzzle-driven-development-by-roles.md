@@ -137,8 +137,8 @@ possible. I can submit a bug and wait for its resolution, but I don't
 want to keep my customers waiting.
 
 This is where puzzle driven development
-is helping me. Instead of submitting bug reports, I would add
-["TBD"](http://en.wikipedia.org/wiki/To_be_announced) puzzles into
+is helping me. Instead of submitting bug reports, I add
+"[TBD](http://en.wikipedia.org/wiki/To_be_announced)" puzzles into
 the SRS document. They are informal replacements of strictly
 formal requirements. They satisfy my customer, since they are in
 plain English, and they are understandable by technical people.
@@ -150,7 +150,7 @@ requirements. Or where I simply don't know what exactly to write.
 
 ## Architect
 
-I'm an architect and my task is to implement a requirement, formally specified
+Now I'm an architect and my task is to implement a requirement, formally specified
 in the SRS. PM is expecting a working feature from me, which I can deliver
 only when the architecture is clear, classes are designed and implemented.
 
