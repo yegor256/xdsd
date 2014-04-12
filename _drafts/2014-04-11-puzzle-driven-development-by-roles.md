@@ -121,7 +121,7 @@ feature request, I'll be paid.
 Besides feature requests from product owners, I often receive
 complaints about the quality of the SRS. The document may not be clear
 enough for some team members. Therefore, it's my job to resolve clarity problems
-and fix the SRS. These team members also are my customers. When they
+and fix the SRS. These team members are also my customers. When they
 close their bug reports, I'll be paid.
 
 In both cases (a feature request or a bug,) I can make changes to the
@@ -137,7 +137,7 @@ formal requirements. They satisfy my customer, since they are in
 plain English, and are understandable by technical people.
 
 Thus, when I don't have time, I don't wait. I change the SRS
-using TBDs at ponts where I can't create a proper and formal description of the
+using TBDs at points where I can't create a proper and formal description of the
 requirements or simply don't know what to write exactly.
 
 
