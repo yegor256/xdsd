@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "No Obligations Principle"
+title: No Obligations
 date: 2014-04-11
 author:
   name: Yegor Bugayenko
@@ -35,7 +35,7 @@ Then everybody starts working and we're starting to hear excuses:
  * "The task is not yet ready, I was doing something else"
  * "May I take a day off tomorrow because of my birthday?"
  * "May I skip the unit test because I don't know how to fix it?"
- * "I don't know why this doesn't work, maybe someone can help me?"
+ * "I don't know how to do it, maybe someone can help me?"
  * "I tried, but this doesn't work, what can I do?"
  * "This installation takes all my time, I can't finish the task"
 
@@ -69,9 +69,10 @@ all the milestones, responsibility **must be** on the shoulders of
 team members. They should be responsible for their own tasks and
 report back to the project manager when they are done.
 
-Implementation problems should be solved by team members on their own.
+{% picture http://img.xdsd.org/2014/04/big-lebowski-her-life-is-in-your-hands.jpg 0 The Big Lebowski (1998) by Joel Coen %}
 
-How do we solve this in XDSD?
+Implementation problems should be solved by team members on their own.
+How do we accomplish this in XDSD?
 
 ## I Owe You Nothing
 
