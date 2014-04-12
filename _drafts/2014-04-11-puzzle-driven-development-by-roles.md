@@ -234,7 +234,7 @@ to find a certain amount of bugs at every stage of the project.
 
 {% picture http://img.xdsd.org/2014/04/fear-and-loathing-adrenochrome.jpg 0 Fear and Loathing in Las Vegas (1998) by Terry Gilliam %}
 
-As as a tester, I'm receive tasks from my project manager. These tasks usually resemble "review feature X and find 10 bugs in it". The project manager
+As as a tester, I receive tasks from my project manager. These tasks usually resemble "review feature X and find 10 bugs in it". The project manager
 needs a certain number of bugs to be found in order to fix the project.
 From his point of view, the project is fixed when, say, 200 bugs have been found. That's why he asks me to find more.
 
