@@ -20,7 +20,7 @@ In this article I'll try to show a project being managed
 with a spirit of Puzzle Driven Development (PDD), from points
 of view of different project members.
 
-There are six key roles in any software team:
+Basically, there are six key roles in any software team:
 
  * Project Manager &mdash; gives tasks and pays on completion
  * System Analyst &mdash; documents product owners' ideas
@@ -41,8 +41,9 @@ first draft version 0.0.1 and delivered it to him. For me, the project
 is done. I've completed my work, and hopefully will never get
 back to it again.
 
-However, the reality is different. I'm getting a call from my friend,
-and he is saying that a few bugs are found in the tool. He is asking me
+However, the reality is different. In a few hours,
+I'm getting a call from my friend,
+and he is saying that a few bugs were found in the tool. He is asking me
 to fix them. Now I can see that my project is not done. It's broken.
 It has a few bugs in it. A few tasks to finish.
 
@@ -61,14 +62,27 @@ fixed, version 3.5.17 will be much more mature and stable.
 
 This is the result of this "fix and break" approach.
 
-## Project Manager
+{% picture http://img.xdsd.org/2014/04/time-and-mess-diagram.jpg %}
 
-{% picture http://img.xdsd.org/2014/04/pulp-fiction-mr-wolf-with-cup.jpg 0 Pulp Fiction (1994) by Quentin Tarantino %}
+The diagram shows the relation between time and mess in the project.
+The bugs my friend is reporting to me are breaking the project, increasing
+its instability (or simply its messiness). My new versions that resolve
+the bugs are fixing the project. Your Github commit dynamics should
+resemble this graph, for example:
+
+{% picture http://img.xdsd.org/2014/04/jcabi-github-commits-graph.png %}
+
+When the project starts, its mess is rather low. Then it starts to grow,
+reaches its peak moment, and goes down.
+
+## Project Manager
 
 The job of a project manager is to do as much as possible
 in order to fix the project. He has to use sponsor's time and money in order
 to remove all bugs and inconsistencies, and return the project back
 to the "fixed" state.
+
+{% picture http://img.xdsd.org/2014/04/pulp-fiction-mr-wolf-with-cup.jpg 0 Pulp Fiction (1994) by Quentin Tarantino %}
 
 By saying "bugs" I mean more than just software errors, but also:
 
