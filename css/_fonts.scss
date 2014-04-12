@@ -13,28 +13,19 @@
  * @version $Id$
  */
 
-$main-font: 'Cambria', serif;
-$main-bold-font: 'Cambria-Bold', sans-serif;
-$title-font: 'HNC', sans-serif;
-$code-font: 'Source Code Pro', 'Courier New';
+$font-main: 'Cambria', serif;
+$font-main-bold: 'Cambria-Bold', sans-serif;
+$font-title: 'HNC', sans-serif;
+$font-code: 'Source Code Pro', 'Courier New';
 
-@mixin main-font() {
-  font-family: $main-font;
-  font-weight: 400;
-}
-
-@mixin title-font() {
-  font-family: $title-font;
+@mixin font-title() {
+  font-family: $font-title;
   font-weight: 600;
 }
 
-@mixin title-light-font() {
-  font-family: $title-font;
+@mixin font-title-light() {
+  font-family: $font-title;
   font-weight: 300;
-}
-
-@mixin code-font() {
-  font-family: $code-font;
 }
 
 @import url('http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600');

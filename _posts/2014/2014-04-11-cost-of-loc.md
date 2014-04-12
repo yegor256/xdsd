@@ -8,13 +8,18 @@ author:
 categories: blog
 disqus: true
 tags: loc cost experience
+keywords:
+  - line of code
+  - cost of LoC
+  - cost of line of code
+  - cost of software development
+  - price per line of code
 ---
 
 Yes, I know, "line of code" (LoC)
 is a [very wrong metric](http://stackoverflow.com/questions/966800/mythical-man-month-10-lines-per-developer-day-how-close-on-large-projects).
 There are [tons of articles](http://blog.codinghorror.com/diseconomies-of-scale-and-lines-of-code/)
 written about it, as well as famous books.
-
 However, I want to compare two projects in which I have participated recently
 and discuss some very interesting numbers.
 
@@ -22,7 +27,7 @@ and discuss some very interesting numbers.
 
 The first project I was apart of was performed  by a traditionally co-located
 group of programmers. There were about 20 of them (I'm not counting managers,
-analysts,product owners, SCRUM masters, etc.) The project was a web auctioning
+analysts, product owners, SCRUM masters, etc.) The project was a web auctioning
 site with pretty high traffic numbers (over two million page views per day).
 
 The code base size was about 200k lines, of which 150k was PHP, 35k JavaScript

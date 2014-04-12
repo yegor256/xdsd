@@ -1,22 +1,28 @@
 ---
 layout: article
 title: "PDD by Roles"
-date: 2014-04-07
+date: 2014-04-11
 author:
   name: Yegor Bugayenko
   avatar: http://www.gravatar.com/avatar/70942ffdd8084b5a51e17e3c0996d53c?s=300
 categories: blog
 disqus: true
-tags: architecture feature pdd process
+tags: architecture srs pdd process
+keywords:
+  - puzzle driven development
+  - software requirements specification
+  - project planning
+  - project roles
 ---
 
 In this article I'll try to show a project being managed
 with a spirit of Puzzle Driven Development (PDD), from points
-of view of different project members. There are six key roles
-in any software team:
+of view of different project members.
+
+There are six key roles in any software team:
 
  * Project Manager &mdash; gives tasks and pays on completion
- * System Analyst &mdash; understands product owners and documents their ideas
+ * System Analyst &mdash; documents product owners' ideas
  * Architect &mdash; defines how system components interact
  * Designer &mdash; implements most complex components
  * Programmer &mdash; implements all components
@@ -26,7 +32,7 @@ Everybody, except a project manager, affect the project in two
 ways: they fix it and they break it at the same time. Let me explain
 by a simple example.
 
-## Fix and Break
+## "Fix and Break"
 
 Let's assume for the sake of simplicity that a project is a simple
 software tool written by myself for my close friend. I created the
@@ -56,41 +62,47 @@ This is the result of this "fix and break" approach.
 
 ## Project Manager
 
+{% picture http://img.xdsd.org/2014/04/pulp-fiction-mr-wolf-with-cup.jpg 600 Pulp Fiction (1994) by Quentin Tarantino %}
+
 The job of a project manager is to do as much as possible
-in order to fix the project. He has to use time and money in order
+in order to fix the project. He has to use sponsor's time and money in order
 to remove all bugs and inconsistencies, and return the project back
-to the "fixed" state. By saying "bugs" I mean more than just
-software errors, but also:
+to the "fixed" state.
+
+By saying "bugs" I mean more than just software errors, but also:
 
  * unclear or ambiguous requirements
- * not yet implemented requirements/features
+ * not yet implemented features
  * functional and non-functional bugs
  * lack of test coverage
  * unresolved `@todo` markers
+ * lack of risk analysis
+ * etc.
 
-The project manager gives you tasks that he wants to be done, in order
+The project manager gives me tasks that he wants to be done, in order
 to fix the project, to stabilize it, to return it back to the
 bug-free state.
 
-Your job, as a member of a software team, is to help him to do the
-fixing part, and, at the same time, do your best to break the project!
+My job, as a member of a software team, is to help him to do the
+fixing part, and, at the same time, to do my best to break the project!
 Like in the example with my friend. He was constantly breaking the
 project by reporting bugs to me. This is how he helped both of us
 to increase quality of the product.
 
-You should do the same. Always try to report new bugs when you're
-working on some feature. Remember that you should
-**fix and break** at the same time.
+I should do the same, always trying to report new bugs when I'm
+working on some feature. I should **fix and break** at the same time.
 
-Now let's look at the project for team members points of view.
+Now let's take a closer look at project roles.
 
 ## System Analyst
 
 A product owner submits an informal feature request, which usually
-starts with "it would be nice to have..." I'm a System Analyst and my
+starts with "it would be nice to have..." I'm a system analyst and my
 job is to translate owner's English into formal specifications in the SRS,
 understandable both by programmers and herself. It's not my responsibility
 to implement the feature.
+
+{% picture http://img.xdsd.org/2014/04/arizona-dream-two-beers-and-two-shots.png 600 Arizona Dream (1992) by Emir Kusturica %}
 
 My task is done when a new version of the SRS is signed by the
 Change Control Board. I'm an interpreter of product owners, translating
@@ -109,7 +121,7 @@ SRS myself immediately, if I have enough time. However, it's not always
 possible. I can submit a bug and wait for its resolution, but I don't
 want to keep my customers waiting.
 
-This is where [puzzle driven development]({% post_url 2009/2009-03-04-pdd %})
+This is where puzzle driven development
 is helping me. Instead of submitting bug reports, I would add
 ["TBD"](http://en.wikipedia.org/wiki/To_be_announced) puzzles into
 the SRS document. They are informal replacements of strictly
@@ -135,7 +147,7 @@ be created. My work flow of artifacts is the following:
 {% graphviz directed graph %}
 digraph G {
   SRS -> UML;
-  UML -> Source code;
+  UML -> "Source code";
 }
 {% endgraphviz %}
 
@@ -145,15 +157,14 @@ I don't really care how source code is implemented. I'm more concerned
 about interaction of components and how well the entire architecture satisfies
 functional and non-functional (!) requirements.
 
-My task will be closed and paid when System Analyst
-changes its state to "implemented" in the SRS. System Analyst is my the only
-my customer. I have to sell my solution to him. Project Manager
-will close my task and will pay me when System Analyst changes
+My task will be closed and paid when system analyst
+changes its state to "implemented" in the SRS. System analyst is my only
+customer. I have to sell my solution to him. Project manager
+will close my task and will pay me when system analyst changes
 the status of the functional requirement from "specified" to "implemented".
 
 The task sounds big, and I have only half an hour. Obviously,
-[puzzle driven development]({% post_url 2009/2009-03-04-pdd %})
-should help me. I will create many tickets and
+puzzle driven development should help me. I will create many tickets and
 puzzles, for example:
 
  * SRS doesn't explain requirements properly
@@ -176,16 +187,47 @@ From this small half-an-hour task
 I will generate many tickets, every one of them will give me extra cash.
 
 
-## Designer
+## Designer and Programmer
 
-TBD...
+The only difference between designer and programmer is the complexity
+of their tasks and the hourly rate. Designers usually do more complex
+and higher level implementations, while programmers implement all
+low-level details.
 
+I'm a programmer and my task is to implement a class or a method or
+fix some functional bug. In most cases, I have only half an hour available.
+And most of the tasks are bigger than that.
 
-## Programmer
+Puzzle driven development helps me to break my task into smaller sub-tasks.
+I'm starting with a unit test, always. In a unit test I'm trying to
+reproduce the bug or model the feature. When my test fails, I commit
+it and check how much time I have left. If I still have time to make it
+pass &mdash; I do it, commit the changes, and report to the project manager.
 
-TBD...
+If I don't have time to implement the fix, I mark pieces of code that
+are not ready yet with `@todo` markers, commit them, and report to the
+project manager that I'm done.
+
+As you see, I'm fixing the code and breaking it at the same time. I'm fixing
+it with my new unit test, but breaking with `@todo` puzzles.
+
+This is how I help the project to increase quality of the product. By
+fixing and breaking at the same time.
+
 
 
 ## Tester
 
-TBD...
+I'm a tester and my primary motivation is to find bugs. This may be
+contradictory to what you've heard before, but we, in XDSD, are planning
+to find certain amount of bugs on every stage of the project.
+
+As as a tester, I'm receiving tasks from my project manager, which sound
+like "review feature X and find 10 bugs in it". The project manager
+needs certain amount of bugs to be found in order to fix the project.
+From his point of view, the project is fixed when there were, say, 200 bugs
+found. That's why he is asking me to find more.
+
+Thus, finding bugs in response to that request is my "fixing" part
+of the whole picture. At the same time, I can find defects on my own
+and report them. This is my "breaking" part of the mission.

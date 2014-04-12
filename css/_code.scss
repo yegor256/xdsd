@@ -30,8 +30,7 @@
 }
 
 code, pre {
-  @include code-font();
-  font-weight: 400;
+  font-family: $font-code;
 }
 
 code {
@@ -57,4 +56,3 @@ table.highlighttable td.linenos {
   background-color:inherit;
   padding: 0;
 }
-
