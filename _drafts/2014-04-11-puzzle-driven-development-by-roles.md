@@ -8,6 +8,7 @@ author:
 categories: blog
 disqus: true
 tags: architecture srs pdd process
+description: How Puzzle Driven Development is seen by different project roles
 keywords:
   - puzzle driven development
   - software requirements specification
@@ -26,7 +27,7 @@ There are six key roles in any software team:
  * Architect &mdash; defines how system components interact
  * Designer &mdash; implements most complex components
  * Programmer &mdash; implements all components
- * Tester &mdash; finds and reports functional bugs
+ * Tester &mdash; finds and reports bugs
 
 Everybody, except a project manager, affect the project in two
 ways: they fix it and they break it at the same time. Let me explain
@@ -221,6 +222,8 @@ fixing and breaking at the same time.
 I'm a tester and my primary motivation is to find bugs. This may be
 contradictory to what you've heard before, but we, in XDSD, are planning
 to find certain amount of bugs on every stage of the project.
+
+{% picture http://img.xdsd.org/2014/04/fear-and-loathing-adrenochrome.jpg 600 Fear and Loathing in Las Vegas (1998) by Terry Gilliam %}
 
 As as a tester, I'm receiving tasks from my project manager, which sound
 like "review feature X and find 10 bugs in it". The project manager

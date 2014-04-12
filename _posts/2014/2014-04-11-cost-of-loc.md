@@ -8,6 +8,7 @@ author:
 categories: blog
 disqus: true
 tags: loc cost experience
+description: How much do you pay per line of code? This article compares two projects
 keywords:
   - line of code
   - cost of LoC

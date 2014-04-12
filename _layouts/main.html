@@ -3,11 +3,17 @@
   <head>
     <link rel="icon" type="image/gif" href="http://img.xdsd.org/favicon.gif">
     <link rel="shortcut icon" href="http://img.xdsd.org/favicon.gif" />
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.xdsd.org/rss"/>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.xdsd.org/rss.xml"/>
     <link rel="author" href="https://plus.google.com/u/0/114792568016408327418?rel=author" />
     <meta charset="utf-8"/>
-    <meta name="description" content="{{ page.excerpt | strip_html | escape }}" />
-    <meta name="keywords" content="{{ page.keywords | join: ', ' }}" />
+    {% if page.description %}
+      <meta name="description" content="{{ page.description | escape }}" />
+    {% elsif page.excerpt %}
+      <meta name="description" content="{{ page.excerpt | strip_html | escape }}" />
+    {% else %}
+      <meta name="description" content="eXtremely Distributed Software Development (XDSD)" />
+    {% endif %}
+    <meta name="keywords" content="{{ page.keywords | join: ', ' | escape }}" />
     <meta name="viewport" content="width=device-width"/>
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/layout.css"/>
