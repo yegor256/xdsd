@@ -8,7 +8,7 @@ author:
 categories: blog
 disqus: true
 tags: architecture srs pdd process
-description: How Puzzle Driven Development is seen by different project roles
+description: How Puzzle Driven Development is Seen by People in Different Project Roles
 keywords:
   - puzzle driven development
   - software requirements specification
@@ -17,7 +17,7 @@ keywords:
 ---
 
 In this post, I'll try to walk you through a project managed
-using the spirit of Puzzle Driven Development (PDD). As I do this, I will attempt to convey typical points
+with the spirit of Puzzle Driven Development (PDD). As I do this, I will attempt to convey typical points
 of view of various project members.
 
 Basically, there are six key roles in any software team:
