@@ -56,7 +56,7 @@ report back to the project manager when they are done.
 
 Implementation problems should be solved by team members on their own.
 
-## I owe you nothing
+## I Owe You Nothing
 
 In XDSD there is the first fundamental principle that says
 the everybody should be paid for deliverables. Based on this
@@ -73,7 +73,7 @@ If you get a task and don't deliver in ten days, the project manager
 can take it away from you, paying nothing. No matter how much time you
 invested into it already, and why you failed.
 
-## Where are the monkeys?
+## Where Are The Monkeys?
 
 This principles helps us to separate responsibilities between a project
 manager and team members. The manager is responsible for finding the right
