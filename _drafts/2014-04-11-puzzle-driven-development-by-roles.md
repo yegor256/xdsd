@@ -94,7 +94,7 @@ bug-free state.
 
 My job, as a member of a software team, is to help him perform the needed fixes and, at the same time, do my best to break the project!
 In the example with my friend, he was breaking the
-project constantlt by reporting bugs to me. This is how he helped both of us
+project constantly by reporting bugs to me. This is how he helped both of us
 increase the final quality of the product.
 
 I should do the same and always try to report new bugs when I'm
