@@ -52,7 +52,7 @@ Let us try to define a bug (or software defect) in a non-ambiguous manner. Somet
  * it refers to functionality already implemented
  * is can be fixed in a reasonable amount of time
  * it doesn't duplicate a bug already reported
- *
+ 
 Reproducibility of a bug is very important. Consequently, it is the responsibility of a bug reporter to make sure the bug is reproducible. Until it is proven that the bug can be reproduced &mdash; it's not a bug for which payment can be made.
 
 A bug is not a task; it has to refer to an existing functionality. Additionally, an explanation must exist for how and when the existing functionality doesn't work as expected.
