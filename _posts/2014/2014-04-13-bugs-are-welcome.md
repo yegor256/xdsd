@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Bugs Are Welcome"
-date: 2014-04-11
+date: 2014-04-13
 author:
   name: Yegor Bugayenko
   avatar: http://www.gravatar.com/avatar/70942ffdd8084b5a51e17e3c0996d53c?s=300
@@ -49,10 +49,10 @@ Of course, our estimate may be wrong. Nevertheless, we have historical records f
 Let us try to define a bug (or software defect) in a non-ambiguous manner. Something can be reported as a bug and subsequently paid for if - and only if:
 
  * it is [reproducible](http://en.wikipedia.org/wiki/Reproducibility)
- * it refers to functionality already implemented 
+ * it refers to functionality already implemented
  * is can be fixed in a reasonable amount of time
  * it doesn't duplicate a bug already reported
- * 
+ *
 Reproducibility of a bug is very important. Consequently, it is the responsibility of a bug reporter to make sure the bug is reproducible. Until it is proven that the bug can be reproduced &mdash; it's not a bug for which payment can be made.
 
 A bug is not a task; it has to refer to an existing functionality. Additionally, an explanation must exist for how and when the existing functionality doesn't work as expected.

@@ -1,7 +1,7 @@
 ---
 layout: article
 title: No Obligations
-date: 2014-04-11
+date: 2014-04-13
 author:
   name: Yegor Bugayenko
   avatar: http://www.gravatar.com/avatar/70942ffdd8084b5a51e17e3c0996d53c?s=300
@@ -38,10 +38,10 @@ Then everybody begins working and we start hearing excuses:
 
 With excuses, team members transfer responsibility back to the project manager. There was a very famous article ["Management Time: Who's Got the Monkey?"](http://hbr.org/1999/11/management-time-whos-got-the-monkey/ar/1) published in the Harvard Business Review about this very subject.
 
-I recommend that you read it. Its authors present problems as monkeys sitting on our shoulders. When the project manager assigns a task to a programmer &mdash; he moves the monkey from his shoulders to the programmer's shoulders. 
+I recommend that you read it. Its authors present problems as monkeys sitting on our shoulders. When the project manager assigns a task to a programmer &mdash; he moves the monkey from his shoulders to the programmer's shoulders.
 The programmer usually presents the excuse "I don't know what to do". Now the monkey is back on the shoulders of the managers. The goal of the manager is to send the monkey back to make it the programmer's problem again.
 
-One of traditional way of transferring responsibility back to team members is to become an aggressive manager. For instance the manager may say, "You have a birthday tomorrow? I don't care, you still have to meet your deadline" or "You don't know how to fix the unit test? Not my problem, it should be fixed by tomorrow," etc. 
+One of traditional way of transferring responsibility back to team members is to become an aggressive manager. For instance the manager may say, "You have a birthday tomorrow? I don't care, you still have to meet your deadline" or "You don't know how to fix the unit test? Not my problem, it should be fixed by tomorrow," etc.
 
 We’ve all seen multiple examples of that type of aggressive management. Personally, I find this management style extremely annoying and destructive for the project. The project environment becomes very unhealthy and good people usually end up leaving.
 
@@ -61,7 +61,7 @@ In essence, for every team member, it says: if you don’t like the task assigne
 
 You have no obligation to do anything. You're free to reject every second task that a project manager gives to you or even all of them.
 
-On the other hand, though, the project manager is not obliged to keep a task assigned to you for longer than 10 days (we think that this time frame is logical). 
+On the other hand, though, the project manager is not obliged to keep a task assigned to you for longer than 10 days (we think that this time frame is logical).
 
 If you get a task, and don't deliver within ten days, the project manager can take it away and pay you nothing - no matter how much time you invested in the task already or the reasons for your failure to complete it.
 
