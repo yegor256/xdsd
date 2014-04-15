@@ -1,0 +1,10 @@
+language: ruby
+branches:
+  only:
+    - master
+install: bundle
+env:
+  global:
+    - secure: "WAi0zxPjYX6c40oPDTh19+8xUcOzEBVn1F7lAJcM2q2s+tGmWeFx+ulEqKC9FZSh9QoCEr2DqpBEMCmz31URD/XLUf9uofrmSdywT+54ZEy0xFP8fa06s710Any928ZJZ19dSQby6S2ViP4FeNV0gy2LguU2NbTJ8b/tSqyqzFY="
+script: ./deploy.sh
+
