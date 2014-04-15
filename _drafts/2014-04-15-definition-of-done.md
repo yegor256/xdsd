@@ -54,6 +54,7 @@ to achieve this without frustration:
  * ask the author of the task all questions up-front
  * don't assume anything &mdash; ask if you're not sure
  * chase task author and ask to close the task &mdash; be aggressive
+ * don't expect any help from anyone &mdash; you're on your own
  * ask about payment if it didn't happen automatically
 
 It is important to remember, that it is your responsibility, as a developer,
