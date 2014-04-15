@@ -17,7 +17,7 @@ rm deploy.sh
 git add .
 git config --global user.email "deploy@xdsd.org"
 git config --global user.name "deploy.sh"
-git commit -am "new site version deployed"
+git commit -am "new site version deployed" --allow-empty
 git push --quiet origin gh-pages
 
 rm -rf "${CLONE}"
