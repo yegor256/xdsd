@@ -11,7 +11,10 @@ tags:
   - process
   - principles
   - management
-description: The article explains how XDSD recommends to manage responsibility
+description: |
+  In XDSD projects we recommend to manage accountability
+  of team members by clearly defining task scope and borders
+  or responsibility
 keywords:
   - responsibility of programmers
   - management of programmers

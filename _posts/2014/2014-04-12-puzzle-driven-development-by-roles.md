@@ -8,7 +8,11 @@ author:
 categories: blog
 disqus: true
 tags: architecture srs pdd process
-description: How Puzzle Driven Development is Seen by People in Different Project Roles
+description: |
+  The article explains how Puzzle Driven Development
+  is seen by people in different project roles,
+  specifically system analyst, architect, designer,
+  programmer, and tester
 keywords:
   - puzzle driven development
   - software requirements specification

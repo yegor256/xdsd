@@ -11,7 +11,10 @@ tags:
   - bugs
   - process
   - principles
-description: The article explains why bugs are very welcome in XDSD
+description: |
+  Unlike a very common understanding of a software bug as something negative,
+  XDSD encourages all team members to find and report as many bugs
+  as possible, in order to improve quality of the end product
 keywords:
   - defects planning
   - management of programmers
@@ -21,7 +24,10 @@ keywords:
   - test script
 ---
 
-The traditional understanding of a software defect (aka "bug") is that it is something negative and want to avoid in our projects. We want our projects to be "bug-free." Our customers are asking us to develop software that doesn't have bugs. And, we, as users, expect software to work without bugs.
+The traditional understanding of a software defect (aka "bug") is that it is
+something negative and want to avoid in our projects. We want our projects to be
+"bug-free." Our customers are asking us to develop software that doesn't have
+bugs. And, we, as users, expect software to work without bugs.
 
 {% picture http://img.xdsd.org/2014/04/charlie-and-chocolate-factory-chewing-breakfast.jpg 0 Charlie and the Chocolate Factory (2005) by Tim Burton %}
 
@@ -52,7 +58,7 @@ Let us try to define a bug (or software defect) in a non-ambiguous manner. Somet
  * it refers to functionality already implemented
  * is can be fixed in a reasonable amount of time
  * it doesn't duplicate a bug already reported
- 
+
 Reproducibility of a bug is very important. Consequently, it is the responsibility of a bug reporter to make sure the bug is reproducible. Until it is proven that the bug can be reproduced &mdash; it's not a bug for which payment can be made.
 
 A bug is not a task; it has to refer to an existing functionality. Additionally, an explanation must exist for how and when the existing functionality doesn't work as expected.

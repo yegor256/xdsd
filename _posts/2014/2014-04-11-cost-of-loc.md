@@ -8,7 +8,10 @@ author:
 categories: blog
 disqus: true
 tags: loc cost experience
-description: How much do you pay per line of code? This article compares two projects
+description: |
+  This article compares two projects and calculates
+  their average costs per one line of code changed.
+  The experiment proves economical advantage of a distributed development.
 keywords:
   - line of code
   - cost of LoC
