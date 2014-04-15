@@ -20,6 +20,7 @@ keywords:
 
 This manual explains your workflow, when working with XDSD project,
 hosted on [Github.com](http://www.github.com).
+
 You start when a Github issue is assigned to you. You will get
 a message from a project manager. You will know the number of the
 issue, its title, its description, and its buget in hours (usually 30 minutes).
