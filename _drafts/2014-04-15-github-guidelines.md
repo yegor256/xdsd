@@ -25,6 +25,11 @@ You start when a Github issue is assigned to you. You will get
 a message from a project manager. You will know the number of the
 issue, its title, its description, and its buget in hours (usually 30 minutes).
 
+If you don't agree with the budget, don't
+hesitate to ask for a raise. As soon as you are comfortable with the budget and
+you understand the scope of work, say it in the ticket and start working.
+Be aware that anything you spend on top of the budget won't be paid!
+
 ## 1. Fork
 
 You don't have write access to the repository in Github, even though you’re part
@@ -65,7 +70,30 @@ git checkout -b 123
 By convention, we use the same name for the branch as the name of the issue
 you're working with.
 
-## 3. Commit and Push
+## 3. Changes
+
+All task-related questions should be discussed in the Github issue. We don't
+use emails, Skype, phone calls or meetings. All questions should be asked
+right in Github issues.
+
+Don't hesitate to submit new issues if you need help or something is not clear.
+
+It's a very common situation, when you get a task, which you can't implement.
+Don't panic. This happens mostly when you just joined the project and
+don't have enough information yet. Don't try to figure this out yourself. Rule
+of thumb is this: "if something is not clear, it is our fault, not yours".
+
+If you don’t understand how project is designed, it is a fault of project designer.
+Submit a bug report, asking for an explanation of a design concept. You will be
+paid for this report, and the information you get back will be shared between
+all other developers. Read this article:
+[Bugs Are Welcome]({% post_url 2014/2014-04-13-bugs-are-welcome %}).
+
+Don't expect anyone to help you. The only source of help is
+the source code itself. If it doesn't
+explain everything that you need &mdash; it is a bug, which should be reported.
+
+## 4. Commit and Push
 
 Make the changes you want to make, using your text editor or IDE. It's a good
 practice to commit changes as often as you make them. Don't accumulate changes
@@ -81,14 +109,14 @@ wait for the answer. If you think that the existing code needs improvements,
 don't hesitate to submit a new issue to Github. Don't try to fix all problems in
 one branch. Let other programmers take care of them.
 
-## 4. Pull Request
+## 5. Pull Request
 
 Create a pull request in Github as this article explains:
 [using-pull-requests](https://help.github.com/articles/using-pull-requests)
 
 Post its number to the original issue and wait for feedback.
 
-## 5. Code Review
+## 6. Code Review
 
 In some time your pull request will be reviewed by someone
 from the project team. In most cases, you will get some
@@ -100,7 +128,7 @@ Be patient, and listen to him carefully. However, don't think
 that your reviewer is always right. If you think that your
 changes are valid, insist and ask for a better review from someone else.
 
-## 6. Merge
+## 7. Merge
 
 When everything looks clear for the reviewer, he will inform
 our automated merge bot, which will pick your pull request
@@ -110,9 +138,13 @@ Very often this operation fails, for different reason. It doesn't
 matter what the reason is, it is your responsibility to make
 sure that your branch is merged.
 
+If you can't merge your branch because of failures in tests that
+don't belong to your task, don't try to fix them. Instead,
+report a problem as a new bug and wait for its resolution.
+
 Remember, until it is merged, you are not paid.
 
-## 7. Payment
+## 8. Payment
 
 Once your changes are merged, go back to the Github issue and
 ask its author to close it.
