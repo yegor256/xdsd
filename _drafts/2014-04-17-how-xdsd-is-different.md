@@ -93,6 +93,11 @@ we are not interested in your opinions and criticism. Instead,
 we encourage everybody to report their suggestions and
 bugs. We even pay for them, read below.
 
+Since we don't have any formal communications, members of
+our project teams don't need to work at specific times. They work
+in their time zones and when it's convenient for them, including
+weekends.
+
 ## We Pay For Bugs
 
 [Bugs are welcome]({% post_url 2014/2014-04-13-bugs-are-welcome %})
