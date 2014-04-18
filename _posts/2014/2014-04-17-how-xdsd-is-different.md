@@ -11,7 +11,9 @@ tags:
   - process
   - human factor
 description: |
-This article lays out the most important and critical differences between XDSD and traditional software development methodologies, including Agile
+  This article lays out the most important and critical
+  differences between XDSD and traditional software
+  development methodologies, including Agile
 keywords:
   - extremely distributed development
   - motivation of programmers
