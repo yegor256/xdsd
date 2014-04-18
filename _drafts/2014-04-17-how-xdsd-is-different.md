@@ -11,9 +11,7 @@ tags:
   - process
   - human factor
 description: |
-  The article presents most important and critical
-  differences between XDSD and traditional software
-  development methodologies, including Agile
+This article lays out the most important and critical differences between XDSD and traditional software development methodologies, including Agile
 keywords:
   - extremely distributed development
   - motivation of programmers
@@ -21,124 +19,65 @@ keywords:
   - effective project management
 ---
 
-eXtremely Distributed Software Development (XDSD) is a methodology
-that significantly differs from traditional ways of working
-in software development teams. Most of the differences
-are so critical that newcomers get confused. This article
-should help you to bootstrap once you join a project managed
-by XDSD principles, either as a developer or a project sponsor.
+eXtremely Distributed Software Development, or XDSD for short, is a methodology that differs significantly from working in traditional software development teams. Most XDSD methods are so different (yet critical) that many newcomers get confused. This article should help you bootstrap once you join a project managed with by XDSD principles -- either as a developer or a project sponsor.
 
 ## We Pay Only For Closed Tasks
 
-Unlike many other projects, in XDSD we pay only for closed tasks
-and only the budget agreed upon. Let me explain by example. Let's say,
-you are a Ruby programmer and you a get a new task, that says
-that you should fix a broken unit test.
+Unlike with many other projects, in XDSD, we pay only for closed tasks and the agreed upon time budget. Let me explain by example. Let's say, you are a Ruby programmer and you a get a new task that requires you to fix a broken unit test. The task has a time budget of 30 minutes, as is the case most of the time. Sometimes, though, tasks may have time budgets of fifteen minutes or one hour.
 
-The task will say that its budget is 30 minutes. In most cases the
-budget is half an hour. Sometimes it may be an hour or fifteen minutes.
+In our example, we agree upon a contract rate of $50 per hour. With the broken test, you will receive $25 for completing the task – 30 minute tasked billed at $50 per hour.
 
-Let's say that your rate on the contract is $50 per hour. This means
-that when you fix the broken test you will get $25.
+It does not matter how long it actually takes you to fix the test. Your actual time spent on the project may be five minutes or five hours. Nevertheless, you will receive compensation for 30 minutes of work only. If you fix the broken test in 5 minutes, you receive $25. If the task takes you an hour, or even a month, to complete, you still receive only $25. 
 
-This also means that it doesn't matter how much you will actually
-spend to fix the test. It can be five minutes or five hours. You will
-still get $25. Moreover, it doesn't matter how long will it take. If you
-finish it in an hour or in a month.
+Furthermore, if you fail to fix the unit test and close the task altogether, you will receive no pay at all for the assignment.
 
-And if you fail to fix the unit test and close the task, you will get zero.
-More details you can get from an article about
-[No Obligations Principle]({% post_url 2014/2014-04-13-no-obligations-principle %})
-and
+You can view more details about this principle in the following articles:
+
+[No Obligations Principle]({% post_url 2014/2014-04-13-no-obligations-principle %}) 
+or
 [Definition of Done]({% post_url 2014/2014-04-15-definition-of-done %}).
 
 {% picture http://img.xdsd.org/2014/04/revolver-avi-with-dollar.jpg 0 Revolver (2005) by Guy Ritchie %}
 
-This is one of the most important differences between XDSD and
-all other methods. Many people get confused when they see this
-in action. And some people leave our projects because of that. They
-simply are used to being paid by the end of the month, no matter how much
-they deliver. We're strongly against this unfairness. We want
-people who deliver more results get more cash in their pockets, and
-those who can't deliver get less.
+As mentioned above, this is one of the most important differences between XDSD and other methods. Many people get confused when they see this principle in action, and some leave our projects because of it. They simply are used to being paid by the end of the month - no matter how much work they actually deliver. In XDSD, we consider this type of approach very unfair. We feel that people who deliver more results should receive more cash. Conversely, those who don't deliver should get less.
 
 ## We Deliver Unfinished Components
 
-Since most of our tasks are half an hour in size, we encourage
-developers to deliver unfinished components. More about this
-concept you can learn from this article about
+Since most of our tasks are half an hour in size, we encourage developers to deliver unfinished components. Read more about this concept in the article below: 
+
 [Puzzle Driven Development]({% post_url 2014/2014-04-12-puzzle-driven-development-by-roles %}).
 
 ## No Informal Communications
 
-In XDSD we don't use any informal communication channels you may
-be used to in other projects. We never use emails, we never talk
-on Skype, we don't do any meetings or phone calls. We don't have
-any mailing lists. We communicate only in ticket tracking system (in most
-projects it is Github Issues).
+Unlike many other projects or teams you may have worked with, XDSD uses no informal communication channels. To clarify, we never use emails, we never chat on Skype and we don't do any meetings or phone calls. Additionally, XDSD maintains no type mailing list. Our only method of communication is a ticket tracking system (which in most projects consists of Github Issues.)
 
-Moreover, we discourage horizontal communications between developers
-outside of a single task scope. When a task is assigned to you, your
-single point of contact (and your only customer) is the author
-of the task. You talk to him in the ticket,
-in order to clarify task requirements.
-When requirements are clear, you deliver the result to him, and
-he closes the task. Then, the project manager pays you.
+Moreover, we discourage horizontal communications between developers regarding the scope of individual tasks. When assigned a task, your single and only point of contact (and your only customer) is the task author. You communicate with the author in the ticket to clarify task requirements.
+
+When the requirements of a task are clear – and you understand them fully -- deliver the result to the author and wait for him to close the task. After the author closes the task, the project manager pays you.
 
 {% picture http://img.xdsd.org/2014/04/goodfellas-paulie-talking.jpg 0 Goodfellas (1990) by Martin Scorsese %}
 
-We're very strict about this principle &mdash; no informal communications.
-However, it doesn't mean that
-we are not interested in your opinions and criticism. Instead,
-we encourage everybody to report their suggestions and
-bugs. We even pay for them, read below.
+We're very strict about this principle &mdash; no informal communications. However, it doesn't mean that we are not interested in your opinions and constructive criticism. Rather, we encourage everyone to submit their suggestions and bugs. By the way, we pay for bugs (see the next section for further details about bug reporting and payments.)
 
-Since we don't have any formal communications, members of
-our project teams don't need to work at specific times. They work
-in their time zones and when it's convenient for them, including
-weekends.
+Since we have no formal communications, members of project teams are not required to work at specific times. Instead, team members work at times convenient for them in their time zones. This includes weekdays and weekends.
 
 ## We Pay For Bugs
 
+Unlike many other software teams, XDSD welcomes bug reports in all our projects. Therefore, we ask for bugs openly and expect team members to report them.  Review the following article for complete details on XDSD bug reporting:
+
 [Bugs are welcome]({% post_url 2014/2014-04-13-bugs-are-welcome %})
-in all XDSD projects, unlike in many other software teams. We ask
-everybody in a project to report every bug found, and every
-suggestion you come up with.
 
-We pay for every properly reported bug.
+We expect everyone involved with a project to report every bug found. Additionally, we encourage team members to make suggestions. In XDSD, we pay team members for every properly reported bug. 
 
-We believe that the more bugs we can find, the higher the quality
-of the end product. Some of new developers get surprised when
-they receive a task that sounds like "you have to find 10 bugs in class A".
-Their first natural reaction is "what if there are no bugs?"
-
-We believe that any software has an unlimited amount of bugs. It is
-just a matter of time and effort to discover them.
+XDSD makes payments for reported bugs because we believe that the more of them we can find, the higher the quality of the end product. Some new developers are surprised when they receive tasks such as "you must find 10 bugs in class A." Often, the natural reaction is to ask "what if there are no bugs?" However, we believe that any software product may have an unlimited amount of bugs; it is just a matter of expending the time and effort needed to discover them.
 
 ## Only Pull Request
 
-We never grant access to the `master` branch to anyone. No matter
-how long you work in the project, you will always have to
-submit your changes through pull requests (most of our projects
-are done in Github).
-
-It's not because we don't trust our developers, but because
-we don't trust anybody :)
+We never grant team member access to the `master` branch -- no matter how long you work on a project. Consequently, you must always submit your changes through pull requests (most of our projects are done in Github.)
+We enforce this policy not because we don't trust our developers, but simply because we don't trust anyone :)
 
 ## No Compromises About Code Quality
 
-Before we can merge any changes from anyone to the `master`
-branch, we check the entire code base with unit tests
-and static analyzers. Unit testing is a very common component
-in modern software development. You should not be surprised by that.
+Before merge any changes to the `master` branch, we check the entire code base with unit tests and static analyzers. Unit testing is a very common component in modern software development, and one by which you should not be surprised. However, the strictness of static analysis is something that often frustrates XDSD newcomers, and we understand that. We pay much more attention to the quality and uniformity of our source code than most of our competing software development teams.
 
-However, static analysis and its strictness sometimes frustrates
-some of newcomers. That's understandable. We pay much more
-attention to the quality and uniformity of our source code than most
-of our competitors &mdash; software development teams.
-
-What is even more important is that we never make compromises. If
-your pull request violates at least one rule of the static analyzer,
-it won't be accepted. And it doesn't matter how small and innocent
-that violation may look. This merging process is fully automated
-and can't be passed around.
+Even more important is that we never make compromises. If your pull request violates even one rule of the static analyzer, it won't be accepted. And, it doesn't matter how small or innocent that violation may look. This merging process is fully automated and can't be bypassed.
