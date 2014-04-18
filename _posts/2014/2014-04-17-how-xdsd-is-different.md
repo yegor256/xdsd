@@ -68,7 +68,6 @@ don't deliver should get less.
 Since most of our tasks are half an hour in size, we encourage developers to
 deliver unfinished components. Read more about this concept in the article
 below:
-
 [Puzzle Driven Development]({% post_url 2014/2014-04-12-puzzle-driven-development-by-roles %}).
 
 ## No Informal Communications
@@ -105,7 +104,6 @@ convenient for them in their time zones. This includes weekdays and weekends.
 Unlike many other software teams, XDSD welcomes bug reports in all our projects.
 Therefore, we ask for bugs openly and expect team members to report them.
 Review the following article for complete details on XDSD bug reporting:
-
 [Bugs are welcome]({% post_url 2014/2014-04-13-bugs-are-welcome %})
 
 We expect everyone involved with a project to report every bug found.
