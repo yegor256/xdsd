@@ -76,7 +76,8 @@ Unlike many other projects or teams you may have worked with, XDSD uses no
 informal communication channels. To clarify, we never use emails, we never chat
 on Skype and we don't do any meetings or phone calls. Additionally, XDSD
 maintains no type mailing list. Our only method of communication is a ticket
-tracking system (which in most projects consists of Github Issues.)
+tracking system (which in most projects consists of
+[Github Issues]({% post_url 2014/2014-04-15-github-guidelines %}).)
 
 Moreover, we discourage horizontal communications between developers regarding
 the scope of individual tasks. When assigned a task, your single and only point
@@ -121,7 +122,8 @@ just a matter of expending the time and effort needed to discover them.
 
 We never grant team member access to the `master` branch &mdash; no matter how
 long you work on a project. Consequently, you must always submit your changes
-through pull requests (most of our projects are done in Github.)
+through pull requests (most of our projects are done in
+[Github]({% post_url 2014/2014-04-15-github-guidelines %}).)
 
 We enforce this policy not because we don't trust our developers, but simply
 because we don't trust anyone :)
