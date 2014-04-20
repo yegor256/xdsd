@@ -1,7 +1,7 @@
 ---
 layout: article
 title: How Hourly Rate Is Calculated
-date: 2014-04-13
+date: 2014-04-20
 author:
   name: Yegor Bugayenko
   avatar: http://www.gravatar.com/avatar/70942ffdd8084b5a51e17e3c0996d53c?s=300
