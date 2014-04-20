@@ -11,6 +11,8 @@
     <link rel="author" href="https://plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="stylesheet" href="/css/layout.css?{{ site.data['hash'] }}"/>
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="canonical" href="http://www.xdsd.org{{ page.url }}" />
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
     <title>{{ page.title }}</title>
   </head>
   <body>
@@ -35,21 +37,27 @@
           </aside>
         {% endif %}
         <ul class="signs">
-          <li>
-            <a class="share" target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')"
-              style="color: #44619c;"
-              href="http://www.facebook.com/sharer/sharer.php?u=http://www.xdsd.org{{ page.url }}"><i class="fa fa-facebook-square"></i></a>
-            <a class="share" target="_blank" onclick="return !window.open(this.href, 'Twitter', 'width=640,height=300')"
-              style="color: #509abf;"
-              href="https://twitter.com/share?url=http://www.xdsd.org{{ page.url }}&amp;text={{ page.title | cgi_escape }}"><i class="fa fa-twitter-square"></i></a>
-            <a class="share" target="_blank" onclick="return !window.open(this.href, 'Google+', 'width=640,height=300')"
-              style="color: #d42020;"
-              href="https://plus.google.com/share?url=http://www.xdsd.org{{ page.url }}"><i class="fa fa-google-plus-square"></i></a>
-            <a class="share" target="_blank" onclick="return !window.open(this.href, 'LinkenIn', 'width=640,height=300')"
-              style="color: #007bb6;"
-              href="https://www.linkedin.com/cws/share?url=http://www.xdsd.org{{ page.url }}"><i class="fa fa-linkedin-square"></i></a>
-            <a class="share" target="_blank" style="color: #ff6600;"
-              href="http://feedburner.google.com/fb/a/mailverify?uri=xdsd&amp;loc=en_US"><i class="fa fa-rss-square"></i></a>
+          <li class="share">
+            <a style="color: #44619c;" title="Share on Facebook"
+              href="http://www.facebook.com/sharer/sharer.php?u=http://www.xdsd.org{{ page.url }}">
+              <i class="fa fa-facebook-square"></i>
+            </a>
+            <a style="color: #509abf;" title="Share on Twitter"
+              href="https://twitter.com/share?url=http://www.xdsd.org{{ page.url }}&amp;text={{ page.title | cgi_escape }}">
+              <i class="fa fa-twitter-square"></i>
+            </a>
+            <a style="color: #d42020;" title="Share on Google+"
+              href="https://plus.google.com/share?url=http://www.xdsd.org{{ page.url }}">
+              <i class="fa fa-google-plus-square"></i>
+            </a>
+            <a style="color: #007bb6;" title="Share on LinkedIn"
+              href="https://www.linkedin.com/cws/share?url=http://www.xdsd.org{{ page.url }}">
+              <i class="fa fa-linkedin-square"></i>
+            </a>
+            <a style="color: #ff6600;" title="Subscribe to RSS"
+              href="http://feedburner.google.com/fb/a/mailverify?uri=xdsd&amp;loc=en_US">
+              <i class="fa fa-rss-square"></i>
+            </a>
           </li>
           <li>
             <a href="/">
