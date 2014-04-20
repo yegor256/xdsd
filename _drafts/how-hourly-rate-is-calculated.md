@@ -12,9 +12,8 @@ tags:
   - process
   - management
 description:
-  A very sensitive and important topic is discussed
-  in the article &mdash; who should get higher rates
-  in extremely distributed projects
+In this article, we discuss a very sensitive and important topic &mdash; who should get higher rates in extremely distributed projects.
+
 keywords:
   - hourly rates of freelancers
   - how much to pay to freelancer
@@ -22,106 +21,54 @@ keywords:
   - price of freelancer
   - how to rate a freelancer
 ---
+In XDSD, everyone -- including project managers, analysts, programmers, and product owners – receives payments based on deliverables with agreed upon budgets. In the fhe first section of the article, [How XDSD Is Different]({% post_url 2014/2014-04-17-how-xdsd-is-different %}) I explain exactly how this concept works. I don’t explain in the article, though, explain how we decide which hourly rate is acceptable for each project participant.
 
-In XDSD, everybody, including project managers, analysts, programmers,
-and product owners, get paid by deliverables with agreed upon budgets.
-The first section of
-[How XDSD Is Different]({% post_url 2014/2014-04-17-how-xdsd-is-different %})
-article explains how exactly this works. However, it doesn't
-explain how do we decide which hourly rate is
-acceptable for each project participant.
+When new people come to us, usually they have some numbers in mind. They know how much they expect to make per week, per month or per day. We rarely negotiate the payment rates, but rather just accept reasonable offers. Nonetheless, every few months, we review payments rates and change them accordingly (increasing or decreasing them as appropriate).
 
-When new people come to us, usually they have some numbers in mind. They
-know how much they expect to make per week, per month, of per day.
-We rarely negotiate the rate. We just accept the offer. However, every
-few months we review the rate and change it (increasing or decreasing).
+Further along in the article, is a list of factors that influence our decision making process regarding payment rates. However, before we get to the factors that influence our rate-setting decisions, it is important to mention that -- unlike most other companies or software teams -- we don't pay attention to the following:
 
-Below is a list of factors that influence our decision making process.
-It is important to mention that, unlike most other companies
-and software teams, we don't pay attention to the following factors:
+ * Your geographic location;
+ * Skills and experience in the CV;
+ * Amount of time already spent on one our projects;
+ * Age, sex, nationality, religious beliefs, etc.
 
- * your geographic location
- * skills and experience in the CV
- * amount of time spent on the project already
- * age, sex, nationality, religious beliefs, etc.
+The factors listed below, though, are indeed very important to us. They affect your "overall score" significantly and play a major part in decisions to decrease or increase a payment rate. After changing a payment rate, we don't negotiate it with the project member.
+Keep in mind that besides decreasing your hourly rate, a low overall score may affect the number of tasks you receive from us.
 
-However, the factors listed below, are very important for us. They
-significantly affect your "overall score" and will decrease or increase
-the rate. We don't negotiate when we change the rate.
-
-Keep in mind that besides decreasing your hourly rate a low
-overall score affects the amount of tasks you will be getting from us.
-The best developers get the most of the new tasks.
-
-So, read on, follow our principles, and enjoy higher rates :)
+The best developers receive most of the new tasks. So, continue reading, follow our principles and learn how to earn and enjoy higher rates :)
 
 ## Fast Delivery
 
-The faster you deliver, the better. We track
-all tasks completed by you and can easily calculate how many days
-it takes to close an average task. To increase this metric you should
-try to close tasks sooner or get rid of them faster.
+The faster you deliver on a task, the better. We track all your completed tasks and can calculate easily how many days it takes you, on average, to close tasks. To increase this metric, you should try to close all tasks as soon as possible to reduce your overall completion-time average.
 
-If you see
-that the task is not suitable for you, don't hold it. Instead, inform
-your project manager that you are not going to work on the task and
-he will try to find you something else.
+If you see that a specific task is not suitable for you, don't hold on to it. Instead, inform your project manager as soon as possible that you do not want to work on the task. After you inform the project manager, he will try find you something else more suitable.
 
-By the way, the best developers close their tasks in five calendar days,
-on average.
+By the way, the best developers usually close their tasks in five calendar days (or less) on average.
 
 ## Past Due Tasks
 
-Even though we encourage everybody to reject tasks that they
-don't like, we are strongly against overdue tasks. Once you started
-to work with a task, we expect you to finish it in time.
+Though we encourage everyone to reject tasks they don't like, we are advise strongly against overdue tasks. Once you have started to work on a task, we expect you to finish it on time. 
 
-Our [No Obligation Principle]({% post_url 2014/2014-04-13-no-obligations-principle %})
-gives our project managers freedom to take any task away from
-you if you're working with it for too long.
+Our [No Obligation Principle]({% post_url 2014/2014-04-13-no-obligations-principle %}) gives our project managers freedom to take any task away from you if don’t complete it by the deadline or in a reasonable amount of time.
 
-Once this happens, your overall score is negatively affected.
-
-Even very good developers have some overdue tasks, this is life. However,
-they keep their number to the minimum, around one overdue task per twenty
-successfully completed in time.
+Removal of tasks by project managers affects your overall score negatively. Nevertheless, even the best developers sometimes have overdue tasks, and we understand that it happens from time to time. However, our best developers they keep their number of overdue tasks to a minimum. A good rule of thumb for acceptable numbers in this area is about one overdue task per twenty completed successfully and on time.
 
 ## Complexity
 
-Every task has a project role assigned to it.
-[Puzzle Driven Development by Roles]({% post_url 2014/2014-04-12-puzzle-driven-development-by-roles %})
-lists key roles we have in XDSD projects. The higher the
-role, the higher the complexity of the task.
+Every XDSD task has a project role assigned to it. The article, [Puzzle Driven Development by Roles]({% post_url 2014/2014-04-12-puzzle-driven-development-by-roles %}), lists the key roles we use in XDSD projects. Generally speaking, the higher the role, the higher the complexity of tasks assigned to it.Therefore, closing a task in an "architect" role is much more important than closing one as am "implementer" (or "developer.")
 
-Closing a task in "architect" role is much more important
-than closing a task in "implementer" (or "developer") role.
-
-The more tasks you close on your current role, the faster you
-will be shifted up and your rate will be increased. Very often
-our developers sit on a few roles at the same time.
+The more tasks you close in your current role, the faster you will receive promotions and receive pay-rate increases. Very often, our developers work in a few roles at the same time.
 
 ## Lengthy Discussions
 
-We discourage long conversations in one task.
-The longer the discussion, the lower your quality as a developer. Ideal
-developer should get a task, deliver the result and inform the task
-author that it's done. Then, the task is closed and paid.
+We discourage long conversations on one task. The longer the discussions about a task, the longer it takes to complete – which lowers your quality as a developer. Ideally, developers should receive a task, deliver the result and inform the task author after it's done. Afterwards, the task author closes the task and payment is made.
 
-We automatically
-track the number of messages you post and receive in your tasks, and they
-negatively affect your overall score.
+We track the number of messages you post and receive in your tasks automatically. Consequently, too many messages may affect your overall score in a negative way.
 
-In order to avoid long conversations
-you should submit new tickets with questions or bug reports.
-[Puzzle Driven Development by Roles]({% post_url 2014/2014-04-12-puzzle-driven-development-by-roles %})
-article explains the whole idea of helping us "to break the project"
-by submitting new bugs into it. Follow this concept and you'll be fine.
+To avoid long conversations in tasks, submit new tickets with questions or bug reports. Again, the [Puzzle Driven Development by Roles]({% post_url 2014/2014-04-12-puzzle-driven-development-by-roles %}) article explains the whole idea of helping us "to break the project" by submitting new bugs. Follow this concept and you'll be fine.
 
 ## Contribution via Bugs
 
-In XDSD
-[Bugs Are Welcome]({% post_url 2014/2014-04-13-bugs-are-welcome %}). You
-are supposed to report bugs along the normal development activities.
-Besides getting extra money for them you increase your overall rating.
+In XDSD [Bugs Are Welcome]({% post_url 2014/2014-04-13-bugs-are-welcome %}). You are supposed to report bugs along the normal development activities. Besides receiving extra money for reporting bugs, you can also increase your overall rating.
 
-The best developers submit one bug for every 2-3 tasks.
+The best developers submit one bug for every 2 to 3 tasks they complete.
