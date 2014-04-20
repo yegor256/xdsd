@@ -25,7 +25,9 @@
               <img src="{{ page.author.avatar }}" class="icon" alt="photo of the author" />
             </div>
             <div class="name">
-              <div itemprop="author">{{ page.author.name }}</div>
+              <div itemprop="author">
+                {{ page.author.name }}
+              </div>
               <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">
                 {{ page.date | date: "%-d %B %Y" }}
               </time>
