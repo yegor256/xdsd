@@ -7,6 +7,6 @@ install:
   - bundle
 env:
   global:
-    - secure: "WAi0zxPjYX6c40oPDTh19+8xUcOzEBVn1F7lAJcM2q2s+tGmWeFx+ulEqKC9FZSh9QoCEr2DqpBEMCmz31URD/XLUf9uofrmSdywT+54ZEy0xFP8fa06s710Any928ZJZ19dSQby6S2ViP4FeNV0gy2LguU2NbTJ8b/tSqyqzFY="
-script: ./deploy.sh
+    - secure: "Bnm/Iq7UjATla4c0L6VlO9+iDY+hXzEwaBon61kV863DwGcoZDfOEiuS+AJ5SRiuj6dom2151xa0rHpE3W2fVl6zLae92OZv5sPouIRx98HVLEflu19RNXzjm9v+DbeEWpqRz8outfR4RcBye6jKLHU0zPish2ZTgPRDm9WWjL0="
+script: jgd -u https://yegor256:$PASSWORD@github.com/yegor256/xdsd.git
 
