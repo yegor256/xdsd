@@ -38,7 +38,7 @@ keywords:
   <div class="recent">
     <header>
       <a href="{{ post.url }}">{{ post.title }}</a>
-      <time>{{ post.date | date: "%-d %B %Y" }}</time>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
     </header>
     {{ post.description | markdownify }}
   </div>
