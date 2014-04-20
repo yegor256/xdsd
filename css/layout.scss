@@ -181,9 +181,17 @@ figure {
   text-align: center;
 }
 
-.date {
-  @include font-title-light();
-  color: #777;
-  font-size: 0.85em;
-  margin-left: 1em;
+.recent {
+  a {
+    @extend strong
+  }
+  time {
+    @include font-title-light();
+    color: #777;
+    font-size: 0.85em;
+    margin-left: 1em;
+  }
+  p {
+    margin-top: 0;
+  }
 }
