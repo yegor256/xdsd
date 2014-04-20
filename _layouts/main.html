@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html itemtype="http://schema.org/Article">
   <head>
+    <meta charset="utf-8"/>
+    <meta name="description"
+      itemprop="headline"
+      content="{{ page.description | escape }}" />
+    <meta name="keywords"
+      itemprop="keywords"
+      content="{{ page.keywords | join: ', ' | escape }}, software development, software outsourcing, offshore programming" />
+    <meta name="viewport" content="width=device-width"/>
     <link rel="icon" type="image/gif" href="http://img.xdsd.org/favicon.gif">
     <link rel="shortcut icon" href="http://img.xdsd.org/favicon.gif" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.xdsd.org/rss.xml"/>
     <link rel="author" href="https://plus.google.com/u/0/114792568016408327418?rel=author" />
-    <meta charset="utf-8"/>
-    <meta name="description" content="{{ page.description | escape }}" />
-    <meta name="keywords" content="{{ page.keywords | join: ', ' | escape }}, software development, software outsourcing, offshore programming" />
-    <meta name="viewport" content="width=device-width"/>
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/layout.css?{{ site.data['hash'] }}"/>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <title>{{ page.title }}</title>
   </head>
   <body>
     <section class="container">
       <aside class="left">
-        <div class="title">
+        <div class="title" itemprop="name">
           {{ page.title }}
         </div>
         {% if page.author %}
@@ -25,8 +29,8 @@
               <img src="{{ page.author.avatar }}" class="icon" alt="photo of the author" />
             </div>
             <div class="name">
-              {{ page.author.name }}<br/>
-              <time itemprop="dateCreated" datetime="{{ page.date | date_to_xmlschema }}">
+              <div itemprop="author">{{ page.author.name }}</div>
+              <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">
                 {{ page.date | date: "%-d %B %Y" }}
               </time>
             </div>
