@@ -20,15 +20,17 @@
           {{ page.title }}
         </div>
         {% if page.author %}
-          <div class="author">
+          <aside class="author">
             <div class="photo">
               <img src="{{ page.author.avatar }}" class="icon" alt="photo of the author" />
             </div>
             <div class="name">
               {{ page.author.name }}<br/>
-              {{ page.date | date: "%-d %B %Y" }}
+              <time itemprop="dateCreated" datetime="{{ page.date | date_to_xmlschema }}">
+                {{ page.date | date: "%-d %B %Y" }}
+              </time>
             </div>
-          </div>
+          </aside>
         {% endif %}
         <ul class="signs">
           <li>

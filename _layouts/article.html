@@ -3,7 +3,11 @@ layout: main
 ---
 
 <div class="post">
-  <main><article>{{ content }}</article></main>
+  <main>
+    <article role="article" itemtype="http://schema.org/BlogPosting">
+      {{ content }}
+    </article>
+  </main>
 </div>
 
 {% if page.disqus %}
