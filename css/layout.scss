@@ -73,63 +73,52 @@ strong {
     text-align: right;
     border-right: 1px solid #ccc;
   }
+  & > * {
+    margin-bottom: 1em;
+  }
 }
 
 .title {
   font-size: 2em;
   line-height: 1em;
-  @media all and (max-width: $threshold) {
-    margin-top: .5em;
-    margin-bottom: 1em;
-  }
-  @media all and (min-width: $threshold + 1px) {
-    margin-bottom: 1em;
-  }
 }
 
 .author {
-  .photo {
-    display: inline-block;
-    img {
-      width: 80px;
-      border-radius: 50%;
-    }
+  @include font-title-light();
+  color: $text-color;
+  font-size: 1em;
+  vertical-align: top;
+  display: inline-block;
+  img {
+    width: 80px;
+    border-radius: 50%;
+    margin-right: .5em;
   }
-  .name {
-    color: $text-color;
-    font-size: 1em;
-    vertical-align: top;
+  .details {
     display: inline-block;
-    @include font-title-light();
   }
 }
 
-.signs {
+.buttons {
+  font-size: 1em;
+  font-family: 'icomoon';
+  text-decoration: none;
+  a {
+    text-decoration: none;
+    margin-right: -.2em;
+  }
+}
+
+.badge {
   font-size: .8em;
   line-height: 1em;
+  a {
+    text-decoration: none;
+  }
   @include font-title-light();
   strong {
     @include font-title-light();
     font-weight: 600;
-  }
-  a {
-    text-decoration: none;
-  }
-  .share {
-    font-size: 1.5em;
-  }
-  @media all and (min-width: $threshold + 1px) {
-    margin-top: 4em;
-  }
-  li {
-    list-style: none;
-    @media all and (max-width: $threshold) {
-      display: inline-block;
-      margin-right: 3em;
-    }
-    @media all and (min-width: $threshold + 1px) {
-      margin-bottom: 1.5em;
-    }
   }
 }
 

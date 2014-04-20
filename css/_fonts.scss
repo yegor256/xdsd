@@ -127,3 +127,14 @@ $font-code: 'Source Code Pro', 'Courier New';
     url('http://img.yegor256.com/fonts/2AACA7_3_0.ttf')
     format('truetype');
 }
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('http://img.xdsd.org/fonts/icomoon.eot?-cfp6bb');
+	src:url('http://img.xdsd.org/fonts/icomoon.eot?#iefix-cfp6bb') format('embedded-opentype'),
+		url('http://img.xdsd.org/fonts/icomoon.woff?-cfp6bb') format('woff'),
+		url('http://img.xdsd.org/fonts/icomoon.ttf?-cfp6bb') format('truetype'),
+		url('http://img.xdsd.org/fonts/icomoon.svg?-cfp6bb#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
