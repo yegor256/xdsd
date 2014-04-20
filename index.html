@@ -39,6 +39,6 @@ keywords:
     <strong><a href="{{ post.url }}">{{ post.title }}</a></strong>
     <span class="date">{{ post.date | date: "%-d %B %Y" }}</span>
     <br/>
-    {{ post.description | escape }}
+    {{ post.description | markdownify }}
   </p>
 {% endfor %}
