@@ -7,7 +7,7 @@ pygments: true
 permalink: :year/:month/:day/:title.html
 
 # see https://github.com/noct/jekyll-sass
-gems: ['jekyll-sass', 'jekyll/timeago']
+gems: ['jekyll-sass']
 sass:
   style: expanded
   deploy_style: compressed
