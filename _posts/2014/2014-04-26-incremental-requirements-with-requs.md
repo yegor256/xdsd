@@ -153,9 +153,11 @@ After entering the commands, I expect to see the `BUILD SUCCESS` message. If
 not, there are some errors and I should fix them. My pull request won't be
 merged and I won't be able to close the task if Requs can't compile the files.
 
-Once compiled, I can open the SRS in any browser. It is in
-`target/requs/index.xml`. Even though it is an XML file, Google Chrome and
-Safari can open it as a webpage.
+Once compiled, I can open the SRS in Firefox. It is in
+`target/requs/index.xml`. Even though it is an XML file, Firefox
+can open it as a webpage. Other browsers won't work. Well, Google Chrome
+will work, but only with this
+[small trick](http://stackoverflow.com/questions/3828898/can-chrome-be-made-to-perform-an-xsl-transform-on-a-local-file).
 
 ## Pull Request Review
 
