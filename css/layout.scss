@@ -14,6 +14,7 @@
  */
 
 $text-color: #475059;
+$content-color: #111;
 $main-width: 700px;
 $left-width: 250px;
 $threshold: $main-width + $left-width * 2 + 100px;
@@ -35,10 +36,10 @@ body {
 
 a,
 a:visited {
-  color: $text-color;
+  color: inherit;
   text-decoration: underline;
   &:hover {
-    color: $text-color;
+    color: inherit;
   }
 }
 
@@ -128,7 +129,7 @@ strong {
   padding: 1em;
   font-size: 0.9em;
   line-height: 1.5em;
-  color: $text-color;
+  color: $content-color;
 }
 
 h1 {
