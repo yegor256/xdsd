@@ -31,3 +31,7 @@ bug report. Then, another team member was assigned to help him. He did,
 through a number of suggestions and instructions. In the end, the
 problem was solved and he also was paid for the solution. In total, the
 project has spent 45 minutes and the problem was solved.
+
+[jcabi/jcabi-github#461](https://github.com/jcabi/jcabi-github/issues/461):
+There were 9 people working with this single task, and two code reviewers. Eleven
+people in total.
