@@ -79,7 +79,7 @@ are finished with their jobs.
 
 {% picture http://img.xdsd.org/2014/04/big-lebowski-her-life-is-in-your-hands.jpg 0 The Big Lebowski (1998) by Joel Coen %}
 
-Implementation problems should be solved by team members on their own. SO, how
+Implementation problems should be solved by team members on their own. So, how
 do we accomplish this in XDSD?
 
 ## I Owe You Nothing
