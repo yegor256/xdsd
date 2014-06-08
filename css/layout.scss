@@ -30,7 +30,7 @@ body {
   font-size: 24px;
   font-family: $font-main;
   @media all and (max-width: $threshold) {
-    padding: .5em;
+    padding: .2em;
   }
 }
 
@@ -123,6 +123,17 @@ strong {
   }
 }
 
+.logo-badge {
+  @media all and (max-width: $threshold) {
+    display: none;
+  }
+  @extend .badge;
+}
+
+.phone-badge {
+  @extend .badge;
+}
+
 .content {
   text-align: left;
   position: relative;
@@ -130,6 +141,9 @@ strong {
   font-size: 0.9em;
   line-height: 1.5em;
   color: $content-color;
+  @media all and (max-width: $threshold) {
+    padding: .2em;
+  }
 }
 
 h1 {
