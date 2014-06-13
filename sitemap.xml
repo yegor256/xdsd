@@ -2,50 +2,50 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://www.xdsd.org//2009/03/04/pdd.html</loc>
-        <lastmod>2014-06-10T06:59:46+00:00</lastmod>
+        <lastmod>2014-06-13T12:00:40+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.xdsd.org//2014/04/11/cost-of-loc.html</loc>
-        <lastmod>2014-06-10T06:59:46+00:00</lastmod>
+        <lastmod>2014-06-13T12:00:40+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.xdsd.org//2014/04/12/puzzle-driven-development-by-roles.html</loc>
-        <lastmod>2014-06-10T06:59:46+00:00</lastmod>
+        <lastmod>2014-06-13T12:00:40+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.xdsd.org//2014/04/13/bugs-are-welcome.html</loc>
-        <lastmod>2014-06-10T06:59:46+00:00</lastmod>
+        <lastmod>2014-06-13T12:00:40+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.xdsd.org//2014/04/13/no-obligations-principle.html</loc>
-        <lastmod>2014-06-10T06:59:46+00:00</lastmod>
+        <lastmod>2014-06-13T12:00:40+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.xdsd.org//2014/04/15/definition-of-done.html</loc>
-        <lastmod>2014-06-10T06:59:46+00:00</lastmod>
+        <lastmod>2014-06-13T12:00:40+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.xdsd.org//2014/04/15/github-guidelines.html</loc>
-        <lastmod>2014-06-10T06:59:46+00:00</lastmod>
+        <lastmod>2014-06-13T12:00:40+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.xdsd.org//2014/04/17/how-xdsd-is-different.html</loc>
-        <lastmod>2014-06-10T06:59:46+00:00</lastmod>
+        <lastmod>2014-06-13T12:00:40+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.xdsd.org//2014/04/20/how-hourly-rate-is-calculated.html</loc>
-        <lastmod>2014-06-10T06:59:46+00:00</lastmod>
+        <lastmod>2014-06-13T12:00:40+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.xdsd.org//2014/04/26/incremental-requirements-with-requs.html</loc>
-        <lastmod>2014-06-10T06:59:46+00:00</lastmod>
-    </url>
-    <url>
-        <loc>http://www.xdsd.org//</loc>
-        <lastmod>2014-06-10T06:59:46+00:00</lastmod>
+        <lastmod>2014-06-13T12:00:40+00:00</lastmod>
     </url>
     <url>
         <loc>http://www.xdsd.org//404.html</loc>
-        <lastmod>2014-06-10T06:59:46+00:00</lastmod>
+        <lastmod>2014-06-13T12:00:40+00:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.xdsd.org//</loc>
+        <lastmod>2014-06-13T12:00:40+00:00</lastmod>
     </url>
 </urlset>
