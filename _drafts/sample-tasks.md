@@ -35,3 +35,6 @@ project has spent 45 minutes and the problem was solved.
 [jcabi/jcabi-github#461](https://github.com/jcabi/jcabi-github/issues/461):
 There were 9 people working with this single task, and two code reviewers. Eleven
 people in total.
+
+[thindeck#189](https://github.com/yegor256/thindeck/issues/189):
+We paid for no deliverables, although the issue was closed/resolved.
