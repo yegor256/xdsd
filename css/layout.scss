@@ -168,6 +168,7 @@ figure {
     line-height: 1em;
     left: .5em;
     bottom: 1em;
+    color: lighten($text-color, 20);
     background-color: rgba(0, 0, 0, .7);
     @include font-title-light();
   }
