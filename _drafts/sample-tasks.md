@@ -38,3 +38,7 @@ people in total.
 
 [thindeck#189](https://github.com/yegor256/thindeck/issues/189):
 We paid for no deliverables, although the issue was closed/resolved.
+
+[jcabi-github#144](https://github.com/jcabi/jcabi-github/issues/144):
+The task was assigned to 10 different people and only the last one
+completed it. It took 7 months.
