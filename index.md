@@ -13,19 +13,17 @@ keywords:
   - project responsibility
 ---
 
-<p>XDSD is an open software development methodology that aims
+XDSD is an open software development methodology that aims
 to reduce risks and improve quality in a project of almost any size.
-At the moment, there are four fundamental principles:</p>
+At the moment, there are four fundamental principles:
 
-<ul>
-    <li>Everyone gets paid for verified deliverables</li>
-    <li>Defects are planned and don't block delivery</li>
-    <li>Quality-of-code metrics are CI gate conditions</li>
-    <li>Master branch is read-only</li>
-</ul>
+ * Everyone gets paid for verified deliverables
+ * Defects are planned and don't block delivery
+ * Quality-of-code metrics are CI gate conditions
+ * Master branch is read-only
 
-<p>Interested in applying XDSD to one of your projects?
-Hire <a href="http://www.teamed.io">teamed.io</a>.</p>
+Interested in applying XDSD to one of your projects?
+Hire [teamed.io](http://www.teamed.io).
 
 <p class="whitepaper">
     <a href="http://img.xdsd.org/XDSD-WhitePaper.pdf"><img src="http://img.xdsd.org/acrobat-icon.png" alt="acrobat icon" style="float: left;"/></a>
@@ -35,7 +33,8 @@ Hire <a href="http://www.teamed.io">teamed.io</a>.</p>
     a few years ago
 </p>
 
-<p>
-    Interested in improving XDSD? Help us, submit an issue to
-    <a href="https://github.com/teamed/xdsd/issues">Github issue tracker</a>.
-</p>
+Interested in improving XDSD? Help us, submit an issue to
+[Github issue tracker](https://github.com/teamed/xdsd/issues).
+
+Read [these blog posts](http://www.yegor256.com/tag/xdsd.html)
+by Yegor Bugayenko about XDSD.
