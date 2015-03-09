@@ -1,1 +1,4 @@
-architect: [yegor256, yegor256, davvd]
+architect:
+- yegor256
+- yegor256
+- davvd
