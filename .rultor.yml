@@ -7,7 +7,6 @@ merge:
 deploy:
   commanders:
   - yegor256
-  - yegor256
 release:
   commanders:
   - yegor256
