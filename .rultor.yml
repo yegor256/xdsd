@@ -1,7 +1,6 @@
 architect:
-- yegor256
-- yegor256
 - davvd
+- yegor256
 merge:
   commanders:
   - yegor256
