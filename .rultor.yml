@@ -3,9 +3,7 @@ architect:
 - davvd
 merge:
   commanders: []
-deploy:
-  commanders:
-  - yegor256
+deploy: {}
 release:
   commanders:
   - yegor256
