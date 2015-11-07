@@ -1,0 +1,9 @@
+architect:
+- yegor256
+- davvd
+merge:
+  commanders: []
+deploy: {}
+release:
+  commanders:
+  - yegor256
