@@ -12,6 +12,9 @@ target/CNAME: target
 target/logo.svg: target
 	cp images/logo.svg target
 
+target/logo.png: target
+	cp images/logo.png target
+
 target/XDSD-WhitePaper.pdf: target
 	cp pdf/XDSD-WhitePaper.pdf target
 
@@ -28,7 +31,7 @@ target/css/%.css: sass/%.scss target
 HTML=target/404.html target/index.html
 CSS=target/css/index.css
 
-site: $(HTML) $(CSS) target/CNAME target/robots.txt target/logo.svg target/XDSD-WhitePaper.pdf
+site: $(HTML) $(CSS) target/CNAME target/robots.txt target/logo.png target/logo.svg target/XDSD-WhitePaper.pdf
 
 lint: scsslint
 
