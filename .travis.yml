@@ -1,12 +1,25 @@
 language: ruby
+sudo: false
 branches:
   only:
-    - master
+  - master
+before_install:
+- set -e
+- openssl aes-256-cbc -K $encrypted_72e767f5966c_key -iv $encrypted_72e767f5966c_iv -in id_rsa.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+- git config --global user.email "travis@seedramp.com"
+- git config --global user.name "travis"
 install:
-  - sudo apt-get install -y graphviz
-  - bundle
-env:
-  global:
-    - secure: "Bnm/Iq7UjATla4c0L6VlO9+iDY+hXzEwaBon61kV863DwGcoZDfOEiuS+AJ5SRiuj6dom2151xa0rHpE3W2fVl6zLae92OZv5sPouIRx98HVLEflu19RNXzjm9v+DbeEWpqRz8outfR4RcBye6jKLHU0zPish2ZTgPRDm9WWjL0="
-script: jgd -u https://yegor256:$PASSWORD@github.com/yegor256/xdsd.git
-
+- travis_retry bundle install
+script:
+- make
+- git clone git@github.com:yegor256/seedramp.git tmp
+- cd tmp
+- git checkout gh-pages
+- rm -rf *
+- mv ../target/* .
+- git add .
+- git commit -am 'deploy' --allow-empty
+- git push origin gh-pages
+- cd ..
+- rm -rf tmp

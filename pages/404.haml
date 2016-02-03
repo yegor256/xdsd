@@ -1,0 +1,18 @@
+%html
+  %head
+    %title Page Not Found
+    %link{:type => 'text/css', :href => 'css/index.css', :rel => 'stylesheet'}
+    = Haml::Engine.new(File.read('pages/_head.haml')).render
+    = Haml::Engine.new(File.read('pages/_ga.haml')).render
+  %body
+    %section
+      %article
+        %p
+          %a{:href => "index.html"}
+            %img{:src => "logo.svg"}
+        %h1
+          Page not found
+        %p
+          Looks like the link you're using is
+          not active any more. Try our
+          %a{:href => "/"} home page

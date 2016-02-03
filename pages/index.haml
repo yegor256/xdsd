@@ -1,0 +1,38 @@
+%html
+  %head
+    %title What is XDSD?
+    %link{:type => 'text/css', :href => 'css/index.css', :rel => 'stylesheet'}
+    = Haml::Engine.new(File.read('pages/_head.haml')).render
+    = Haml::Engine.new(File.read('pages/_ga.haml')).render
+  %body
+    %section
+      %article
+        %p
+          %a{:href => "index.html"}
+            %img{:src => "logo.svg"}
+        %h1
+          eXtremely Distributed Software Development
+        %p
+          XDSD is an open software development methodology that aims
+          to reduce risks and improve quality in a project of almost any size.
+          There are four fundamental principles:
+        %ul
+          %li Everyone gets paid for verified deliverables
+          %li Defects are planned and don't block delivery
+          %li Quality-of-code metrics are CI gate conditions
+          %li Master branch is read-only
+        %p
+          Want to apply XDSD to your project? Hire
+          %a{:href => "http://www.teamed.io"} Teamed.io
+        %p
+          Read our
+          %a{:href => "XDSD-WhitePaper.pdf"} White Paper (70Kb PDF)
+        %p
+          Interested in improving XDSD? Help us,
+          %a{:href => "https://github.com/teamed/xdsd/issues"} submit an issue
+        %p
+          Read
+          %a{:href => "http://www.yegor256.com/tag/xdsd.html"} these blog posts
+          by Yegor Bugayenko about XDSD.
+        %p
+          %a{:href => "mailto:info@xdsd.org"} info@xdsd.org

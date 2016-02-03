@@ -1,0 +1,59 @@
+$width: 700px;
+$threshold: $width + 100px;
+$font: 'Roboto', 'Times New Roman', serif;
+$white: #fff;
+$black: #222;
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body {
+  background-color: $white;
+  font-family: $font;
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  padding: 2em;
+  position: relative;
+  @media all and (max-width: $threshold) {
+    font-size: 16px;
+    padding: 1em;
+  }
+}
+
+h1 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+a,
+a:visited {
+  color: inherit;
+  text-decoration: underline;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+section {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: $width;
+  @media all and (max-width: $threshold) {
+    width: 100%;
+  }
+}
+
+article {
+  color: $black;
+  line-height: 1.5em;
+  padding: 1em;
+  position: relative;
+  text-align: left;
+
+  @media all and (max-width: $threshold) {
+    padding: .2em;
+  }
+}
+
