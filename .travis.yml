@@ -5,7 +5,7 @@ branches:
   - master
 before_install:
 - set -e
-- openssl aes-256-cbc -K $encrypted_72e767f5966c_key -iv $encrypted_72e767f5966c_iv -in id_rsa.enc -out ~/.ssh/id_rsa -d
+- openssl aes-256-cbc -K $encrypted_20baaefd84a9_key -iv $encrypted_20baaefd84a9_iv -in id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 - git config --global user.email "travis@seedramp.com"
 - git config --global user.name "travis"
@@ -13,7 +13,7 @@ install:
 - travis_retry bundle install
 script:
 - make
-- git clone git@github.com:yegor256/seedramp.git tmp
+- git clone git@github.com:teamed/xdsd.git tmp
 - cd tmp
 - git checkout gh-pages
 - rm -rf *
