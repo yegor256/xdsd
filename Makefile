@@ -28,10 +28,16 @@ target/css/%.css: sass/%.scss target
 	mkdir -p target/css
 	sass --style=compressed --sourcemap=none $< $@
 
+redirects: target
+	while IFS=" " read src target; do \
+	    mkdir -p target/$$(dirname $$src); \
+	    echo "<html><head><meta http-equiv='refresh' content='0; URL=$$target'/></head><body/></html>" > target/$$src; \
+	done < redirects
+
 HTML=target/404.html target/index.html
 CSS=target/css/index.css
 
-site: $(HTML) $(CSS) target/CNAME target/robots.txt target/logo.png target/logo.svg target/XDSD-WhitePaper.pdf
+site: $(HTML) $(CSS) redirects target/CNAME target/robots.txt target/logo.png target/logo.svg target/XDSD-WhitePaper.pdf
 
 lint: scsslint
 
