@@ -1,3 +1,7 @@
+HTML = $(patsubst pages/%.haml, target/%.html, $(wildcard pages/[^_]*.haml))
+CSS = $(patsubst sass/%.scss, target/css/%.css, $(wildcard sass/[^_]*.scss))
+IMAGES = $(patsubst images/%, target/images/%, $(wildcard images/*))
+
 all: target lint site
 
 target:
@@ -9,11 +13,9 @@ scsslint:
 target/CNAME: target
 	echo "www.xdsd.org" > target/CNAME
 
-target/logo.svg: target
-	cp images/logo.svg target
-
-target/logo.png: target
-	cp images/logo.png target
+target/images/%: images/% target
+	mkdir -p target/images
+	cp -R $< $@
 
 target/XDSD-WhitePaper.pdf: target
 	cp pdf/XDSD-WhitePaper.pdf target
@@ -34,10 +36,7 @@ redirects: target
 	    echo "<html><head><meta http-equiv='refresh' content='0; URL=$$target'/></head><body/></html>" > target/$$src; \
 	done < redirects
 
-HTML=target/404.html target/index.html
-CSS=target/css/index.css
-
-site: $(HTML) $(CSS) redirects target/CNAME target/robots.txt target/logo.png target/logo.svg target/XDSD-WhitePaper.pdf
+site: $(HTML) $(CSS) $(IMAGES) redirects target/CNAME target/robots.txt target/XDSD-WhitePaper.pdf
 
 lint: scsslint
 
