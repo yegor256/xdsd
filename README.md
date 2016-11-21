@@ -1,4 +1,4 @@
-<img src="http://www.xdsd.org/logo.svg" width="64px" height="64px" />
+<img src="http://www.xdsd.org/images/logo.svg" width="64px" height="64px" />
 
 [![Build Status](https://travis-ci.org/teamed/xdsd.svg)](https://travis-ci.org/teamed/xdsd)
 
