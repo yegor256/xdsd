@@ -1,0 +1,68 @@
+%
+% Copyright (c) 2008, TechnoPark Corp., Florida, USA
+% All rights reserved. THIS IS PRIVATE DOCUMENTATION.
+%
+% Redistribution and use in source and binary forms, with or without modification, are PROHIBITED
+% without prior written permission from the author. This product may NOT be used anywhere
+% and on any computer except the server platform of TechnoPark Corp. located at
+% www.technoparkcorp.com. If you received this code occacionally and without intent to use
+% it, please report this incident to the author}{email: privacy@technoparkcorp.com or
+%}{mail: 568 Ninth Street South 202 Naples, Florida 34102, the United States of America,
+% tel. +1 (239) 243 0206, fax +1 (239) 236-0738.
+%
+% @version $Id$
+%
+\tikz \node [scale=0.75] {
+    \begin{tikzpicture}
+        \newcommand{\actor}[3]{
+            % #1 - TIKZ name of the element
+            % #2 - coordinates
+            % #3 - text to render
+            % for example: \actor{alex}{2,2}{Alex Smith}
+            \node [outer sep=-1mm] at (#2) (#1) {
+                \tikz \draw [thick] (0,0) -- +(0,-0.5) % body
+                    -- +(-0.5,-1) % left leg
+                    +(0,-0.5) -- +(0.5,-1) % right leg
+                    +(-0.5,-0.1) -- +(0.5,-0.1) % hands
+                    +(0,+0.25) circle (0.25) %head
+                    +(0,-1) node [anchor=north] {#3};
+            };
+        }
+        \newcommand{\pack}[3]{
+            % #1 - TIKZ name of the element
+            % #2 - coordinates
+            % #3 - text to render
+            % for example: \pack{tickets}{2,2}{Tickets}
+            \node [outer sep=1mm] at (#2) (#1) {
+                \begin{tikzpicture}
+                    \draw
+                        (0,0) node [block, text=tpcRUPBody] {#3}
+                        +(0.07,0.07) node [block, text=tpcRUPBody] {#3}
+                        +(0.14,0.14) node [block] {#3};
+                \end{tikzpicture}
+            };
+        }
+        \tikzstyle{block} = [draw=tpcRUPBorder, fill=tpcRUPBody, inner sep=0.4cm, thick];
+        \tikzstyle{ln} = [->, very thick];
+        %
+        \pack{tickets}{0,0}{\enru{Tickets}{Тикеты}};
+        \actor{customer}{4,0}{\enru{Customer}{Заказчик}}
+        \actor{testers}{0,-3}{\enru{Testers}{Тестеры}}
+        \actor{sa}{0,3}{\enru{System Analyst}{Аналитик}}
+        \pack{wiki}{4,3}{Wiki};
+        \actor{engineers}{12,3}{\enru{Engineers}{Инженеры}}
+        %
+        \draw [ln] (testers) -- (tickets);
+        \draw [ln] (customer) -- (tickets);
+        \draw [ln] (tickets) -- (sa);
+        \draw [ln] (wiki) -- (customer);
+        \draw [ln] (sa) -- (wiki);
+        \draw [ln] (wiki) -- node [midway, block] {RQDQL} (engineers);
+        %
+        \node[block, outer sep=2mm] at (10,-2) (sud) {\begin{minipage}{6em}\centering\setstretch{1}
+            \enru{System\\Under\\Development}{Создаваемая\\Система}
+        \end{minipage}};
+        \draw [ln] (engineers) -- (sud);
+        \draw [ln] (sud) -- (customer);
+    \end{tikzpicture}
+};

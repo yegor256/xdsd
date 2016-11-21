@@ -1,0 +1,34 @@
+%
+% Copyright (c) 2008, TechnoPark Corp., Florida, USA
+% All rights reserved. THIS IS PRIVATE DOCUMENTATION.
+%
+% Redistribution and use in source and binary forms, with or without modification, are PROHIBITED
+% without prior written permission from the author. This product may NOT be used anywhere
+% and on any computer except the server platform of TechnoPark Corp. located at
+% www.technoparkcorp.com. If you received this code occacionally and without intent to use
+% it, please report this incident to the author}{email: privacy@technoparkcorp.com or
+%}{mail: 568 Ninth Street South 202 Naples, Florida 34102, the United States of America,
+% tel. +1 (239) 243 0206, fax +1 (239) 236-0738.
+%
+% @version $Id$
+%
+
+\begin{tikzpicture}
+
+\input{drawings/background.tex}
+
+\tikzstyle{beta} = [draw=white, fill=tpcGreen, thick];
+\tikzstyle{wip} = [beta, fill=tpcYellow];
+\node [beta, anchor=east] at (-3,3) {RQDQL};
+\node [beta, anchor=east] at (-3,-3) {PDD};
+\node [wip, anchor=west] at (3,3) {REMPL};
+\node [wip, anchor=west] at (3,-3) {framework};
+
+\node [beta, anchor=west] at (-2,1) {FaZend};
+\node [wip, anchor=east] at (2,-1) {NetBout};
+\node [beta, anchor=west] at (-2,-1) {thePanel};
+
+\node [beta, anchor=west] at (6,3) {ready in beta version};
+\node [wip, anchor=west] at (6,2) {work in progress};
+
+\end{tikzpicture}

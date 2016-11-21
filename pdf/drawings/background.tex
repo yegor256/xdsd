@@ -1,0 +1,28 @@
+%
+% Copyright (c) 2008, TechnoPark Corp., Florida, USA
+% All rights reserved. THIS IS PRIVATE DOCUMENTATION.
+%
+% Redistribution and use in source and binary forms, with or without modification, are PROHIBITED
+% without prior written permission from the author. This product may NOT be used anywhere
+% and on any computer except the server platform of TechnoPark Corp. located at
+% www.technoparkcorp.com. If you received this code occacionally and without intent to use
+% it, please report this incident to the author}{email: privacy@technoparkcorp.com or
+%}{mail: 568 Ninth Street South 202 Naples, Florida 34102, the United States of America,
+% tel. +1 (239) 243 0206, fax +1 (239) 236-0738.
+%
+% @version $Id$
+%
+
+\tikzstyle{side} = [rectangle, draw=tpcLightGrey, thick, minimum width=3.5cm, minimum height=3.5cm, fill=tpcLightGrey];
+\node[side, anchor=south east] at (-0.5,0.5) (requirements) {};
+\node[side, anchor=south west] at (0.5,0.5) (design) {};
+\node[side, anchor=north east] at (-0.5,-0.5) (coding) {};
+\node[side, anchor=north west] at (0.5,-0.5) (testing) {};
+
+\node[below=0cm of requirements.north west, anchor=north west, text=white] {Requirements};
+\node[below=0cm of design.north east, anchor=north east, text=white] {Design};
+\node[below=0cm of coding.south west, anchor=south west, text=white] {Coding};
+\node[below=0cm of testing.south east, anchor=south east, text=white] {Testing};
+
+\node[side, anchor=center, text=white, fill=tpcBlue, draw=tpcBlue, text width=2cm, text centered] at (0,0) (delivery)
+    {XDSD Delivery};

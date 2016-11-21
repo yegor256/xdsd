@@ -1,0 +1,54 @@
+%
+% Copyright (c) 2008, TechnoPark Corp., Florida, USA
+% All rights reserved. THIS IS PRIVATE DOCUMENTATION.
+%
+% Redistribution and use in source and binary forms, with or without modification, are PROHIBITED
+% without prior written permission from the author. This product may NOT be used anywhere
+% and on any computer except the server platform of TechnoPark Corp. located at
+% www.technoparkcorp.com. If you received this code occacionally and without intent to use
+% it, please report this incident to the author}{email: privacy@technoparkcorp.com or
+%}{mail: 568 Ninth Street South 202 Naples, Florida 34102, the United States of America,
+% tel. +1 (239) 243 0206, fax +1 (239) 236-0738.
+%
+% @version $Id$
+%
+\tikz \node [scale=0.5] {
+    \begin{tikzpicture}
+        \newcommand{\cell}[4]{
+            \node[regular polygon, regular polygon sides=6, minimum size=1cm, draw, inner sep=0cm, fill=#4]
+            at ($#1*(0.75,0) + #2*(0,0.866) + #3*(0,0.433)$) {};
+        }
+        % empty
+        \node [] at (0,0) (start) {
+            \begin{tikzpicture}
+            \cell{2}{-1}{0}{tpcLightGrey}\cell{2}{0}{0}{tpcLightGrey}\cell{2}{1}{0}{tpcLightGrey}
+            \cell{1}{-2}{1}{tpcLightGrey}\cell{1}{-1}{1}{tpcLightGrey}\cell{1}{0}{1}{tpcLightGrey}\cell{1}{1}{1}{tpcLightGrey}
+            \cell{0}{-2}{0}{tpcLightGrey}\cell{0}{-1}{0}{tpcLightGrey}\cell{0}{0}{0}{tpcLightGrey}\cell{0}{1}{0}{tpcLightGrey}\cell{0}{2}{0}{tpcLightGrey}
+            \cell{-1}{-2}{1}{tpcLightGrey}\cell{-1}{-1}{1}{tpcLightGrey}\cell{-1}{0}{1}{tpcLightGrey}\cell{-1}{1}{1}{tpcLightGrey}
+            \cell{-2}{-1}{0}{tpcLightGrey}\cell{-2}{0}{0}{tpcLightGrey}\cell{-2}{1}{0}{tpcLightGrey}
+            \end{tikzpicture}
+        };
+        % partly filled
+        \node [] at (5,0) (partly) {
+            \begin{tikzpicture}
+            \cell{2}{-1}{0}{tpcLightGrey}\cell{2}{0}{0}{tpcLightGrey}\cell{2}{1}{0}{tpcLightGrey}
+            \cell{1}{-2}{1}{tpcLightGrey}\cell{1}{-1}{1}{tpcLightGrey}\cell{1}{0}{1}{tpcLightGrey}\cell{1}{1}{1}{tpcLightGrey}
+            \cell{0}{-2}{0}{tpcLightGrey}\cell{0}{-1}{0}{tpcBlue}\cell{0}{0}{0}{tpcLightGrey}\cell{0}{1}{0}{tpcLightGrey}\cell{0}{2}{0}{tpcLightGrey}
+            \cell{-1}{-2}{1}{tpcBlue}\cell{-1}{-1}{1}{tpcBlue}\cell{-1}{0}{1}{tpcLightGrey}\cell{-1}{1}{1}{tpcBlue}
+            \cell{-2}{-1}{0}{tpcLightGrey}\cell{-2}{0}{0}{tpcLightGrey}\cell{-2}{1}{0}{tpcLightGrey}
+            \end{tikzpicture}
+        };
+        % finished
+        \node [] at (12,0) (finish) {
+            \begin{tikzpicture}
+            \cell{2}{-1}{0}{tpcBlue}\cell{2}{0}{0}{tpcBlue}\cell{2}{1}{0}{tpcBlue}
+            \cell{1}{-2}{1}{tpcBlue}\cell{1}{-1}{1}{tpcBlue}\cell{1}{0}{1}{tpcLightGrey}\cell{1}{1}{1}{tpcBlue}
+            \cell{0}{-2}{0}{tpcBlue}\cell{0}{-1}{0}{tpcBlue}\cell{0}{0}{0}{tpcBlue}\cell{0}{1}{0}{tpcBlue}\cell{0}{2}{0}{tpcBlue}
+            \cell{-1}{-2}{1}{tpcBlue}\cell{-1}{-1}{1}{tpcBlue}\cell{-1}{0}{1}{tpcBlue}\cell{-1}{1}{1}{tpcBlue}
+            \cell{-2}{-1}{0}{tpcBlue}\cell{-2}{0}{0}{tpcLightGrey}\cell{-2}{1}{0}{tpcBlue}
+            \end{tikzpicture}
+        };
+        \draw [very thick, ->] (start) -- (partly);
+        \draw [very thick, ->] (partly) -- node [midway, fill=white] {...} (finish);
+    \end{tikzpicture}
+};
