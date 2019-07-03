@@ -1,27 +1,27 @@
 language: ruby
 rvm:
-  - 2.2.2
+  - 2.6.0
 sudo: false
 branches:
   only:
   - master
 before_install:
-- set -e
-- openssl aes-256-cbc -K $encrypted_20baaefd84a9_key -iv $encrypted_20baaefd84a9_iv -in id_rsa.enc -out ~/.ssh/id_rsa -d
-- chmod 600 ~/.ssh/id_rsa
-- git config --global user.email "travis@seedramp.com"
-- git config --global user.name "travis"
+  - set -e
+  - openssl aes-256-cbc -K $encrypted_20baaefd84a9_key -iv $encrypted_20baaefd84a9_iv -in id_rsa.enc -out ~/.ssh/id_rsa -d
+  - chmod 600 ~/.ssh/id_rsa
+  - git config --global user.email "travis@seedramp.com"
+  - git config --global user.name "travis"
 install:
-- travis_retry bundle install
+  - travis_retry bundle install
 script:
-- make
-- git clone git@github.com:teamed/xdsd.git tmp
-- cd tmp
-- git checkout gh-pages
-- rm -rf *
-- mv ../target/* .
-- git add .
-- git commit -am 'deploy' --allow-empty
-- git push origin gh-pages
-- cd ..
-- rm -rf tmp
+  - make
+  - git clone git@github.com:yegor256/xdsd.git tmp
+  - cd tmp
+  - git checkout gh-pages
+  - rm -rf *
+  - mv ../target/* .
+  - git add .
+  - git commit -am 'deploy' --allow-empty
+  - git push origin gh-pages
+  - cd ..
+  - rm -rf tmp
