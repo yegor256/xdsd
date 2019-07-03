@@ -24,7 +24,7 @@ target/robots.txt: target
 	echo "" > target/robots.txt
 
 target/%.html : pages/%.haml target
-	haml --style=indented $< > $@
+	haml $< > $@
 
 target/css/%.css: sass/%.scss target
 	mkdir -p target/css
