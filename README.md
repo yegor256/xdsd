@@ -16,7 +16,7 @@ Then, run this:
 
 ```bash
 $ bundle update
-$ bundle exec jekyll serve
+$ make
 ```
 
 You should see the site at `http://localhost:4000`.
